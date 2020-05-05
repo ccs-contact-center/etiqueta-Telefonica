@@ -18,7 +18,7 @@ class TemaUnoView extends Component {
             <Col xs="12">
               <img
                 src={actitudPositiva}
-                style={{ width: 360}}
+                style={{ width: 250}}
                 alt="actitudPositiva"
                 className="img-fluid bordeImagen animated slideInUp "
               />
