@@ -12,12 +12,12 @@ export default {
         {
           name: 'Objetivo',
          // url: '/temarioViews/BienvenidaView',
-          icon: 'icon-home',
+         icon: 'icon-directions',
         },
         {
           name: 'Importancia de la Etiqueta Telefónica',
          // url: '/temarioViews/ObjetivoView',
-          icon: 'icon-directions',
+         icon: 'icon-graduation',
         },
         {
           name: 'Elementos de la Etiqueta Telefónica',
