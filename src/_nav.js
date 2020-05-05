@@ -6,58 +6,29 @@ export default {
       class: 'text-center',
     },
     {
-      name: '¿Que hace QA?',
+      name: 'Etiqueta Telefonica',
       icon: 'icon-home',
       children: [
         {
-          name: 'Bienvenida',
-          url: '/temarioViews/BienvenidaView',
+          name: 'Objetivo',
+         // url: '/temarioViews/BienvenidaView',
           icon: 'icon-home',
         },
         {
-          name: 'Objetivo',
-          url: '/temarioViews/ObjetivoView',
+          name: 'Importancia de la Etiqueta Telefónica',
+         // url: '/temarioViews/ObjetivoView',
           icon: 'icon-directions',
         },
         {
-          name: 'Presentación',
-          url: '/temarioViews/PresentacionView',
+          name: 'Elementos de la Etiqueta Telefónica',
+         // url: '/temarioViews/PresentacionView',
           icon: 'icon-graduation',
         },
+      
+    
         {
-          name: 'Definiciones',
-          url: '/temarioViews/TemaUnoView',
-          icon: 'icon-note',
-        },
-        {
-          name: 'Lineamientos generales de la Metodología P 1',
-          url: '/temarioViews/TemaDosView',
-          icon: 'icon-note',
-        },
-        {
-          name: 'Lineamientos generales de la Metodología P 2',
-          url: '/temarioViews/TemaTresView',
-          icon: 'icon-note',
-        },
-        {
-          name: 'Lineamientos generales de la Metodología P 3',
-          url: '/temarioViews/TemaCuatroView',
-          icon: 'icon-note',
-        },
-        {
-          name: 'Descripción del procedimiento',
-          url: '/temarioViews/TemaCincoView',
-          icon: 'icon-note',
-        },
-        {
-          name: 'Seguimiento de operaciones',
-          url: '/temarioViews/TemaSeisView',
-          icon: 'icon-note',
-        },
-
-        {
-          name: 'Actividad',
-          url: '/temarioViews/ActividadView',
+          name: 'Evaluación',
+         // url: '/temarioViews/ActividadView',
           icon: 'icon-puzzle'}
           
         
