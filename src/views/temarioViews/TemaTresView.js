@@ -17,23 +17,23 @@ class TemaDosView extends Component {
             <Col xs="12" className="centrado-fila">
               <img
                 src={elemetos}
-                style={{ width: 300 }}
+                style={{ width:250 }}
                 alt="elemetos"
-                className="img-fluid"
+                className="img-fluid animated bounceInRight delay-0s "
               />
             </Col>
             <Col xs="12" className="centrado-fila mb-2">
-              <div className="cajaA1" style={{width:'250px'}}>
+              <div className="cajaA1 animated bounceInRight delay-1s" style={{width:'250px'}}>
                 <p className="text-center" style={{marginBottom:'0px'}}><b>ENTONACIÓN</b></p>
               </div>
             </Col>
             <Col xs="12" className="centrado-fila mb-2">
-              <div className="cajaA1" style={{width:'250px'}}>
+              <div className="cajaA1 animated bounceInRight delay-2s" style={{width:'250px'}}>
                 <p className="text-center" style={{marginBottom:'0px'}}><b>ARTICULACIÓN</b></p>
               </div>
             </Col>
             <Col xs="12" className="centrado-fila">
-              <div className="cajaA1" style={{width:'250px'}}>
+              <div className="cajaA1 animated bounceInRight delay-3s" style={{width:'250px'}}>
                 <p className="text-center" style={{marginBottom:'0px'}}><b>LOCUCIÓN O RITMO</b> </p>
               </div>
             </Col>
