@@ -26,11 +26,11 @@ class TemaDosView extends Component {
                 src={Atencion}
                 style={{ width: 360 }}
                 alt="atencion-a-clientes-tn"
-                className="img-fluid bordeImagen"
+                className="img-fluid bordeImagen  animated zoomInLeft delay-0s "
               />
             </Col>
             <Col xs="6">
-              <ul>
+              <ul className="animated zoomInRight delay-1s">
                 <li>Reformulación o Paráfrasis</li>
                 <li>Hacer preguntas (sondear)</li>
                 <li>Empatizar</li>
