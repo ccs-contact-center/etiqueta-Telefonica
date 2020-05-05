@@ -21,11 +21,11 @@ class TemaSeisView extends Component {
                 src={servicio}
                 style={{ width: 360 }}
                 alt="servicio"
-                className="img-fluid bordeImagen"
+                className="img-fluid bordeImagen animated lightSpeedIn delay-0s"
               />
             </Col>
             <Col xs="6" sm="5" md="5">
-              <ul>
+              <ul className="animated lightSpeedIn delay-1s">
                 <li>Un tono amistoso y cordial</li>
                 <li>Estar predispuesto a la ayuda</li>
                 <li>Una actitud de apertura mental y respeto</li>
