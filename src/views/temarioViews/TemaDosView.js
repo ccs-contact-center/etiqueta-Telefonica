@@ -11,7 +11,7 @@ class TemaDosView extends Component {
     return (
       <div className="animated fadeIn ">
         <CardHeader className="text-left">
-          <h3>Elementos de una etiqueta telefonica</h3>
+          <h3>Importancia de la Etiqueta Telefónica</h3>
         </CardHeader>
         <CardBody className="">
           <Row className="centrado-fila">
@@ -24,7 +24,10 @@ class TemaDosView extends Component {
               />
             </Col>
             <Col md="10" sm="10" className="">
-              <p style={{ marginBottom: '0px' }} className="animated rotateInDownRight delay-0s">
+              <p
+                style={{ marginBottom: '0px' }}
+                className="animated rotateInDownRight delay-0s"
+              >
                 La actitud es la manera de actuar de una persona, es decir, el
                 comportamiento que emplea un individuo para hacer las cosas.
               </p>
@@ -40,7 +43,10 @@ class TemaDosView extends Component {
               />
             </Col>
             <Col md="10" sm="10" className="">
-              <p style={{ marginBottom: '0px' }} className="animated rotateInDownRight delay-1s">
+              <p
+                style={{ marginBottom: '0px' }}
+                className="animated rotateInDownRight delay-1s"
+              >
                 Concentración. El teléfono exige exclusividad y concentración.
               </p>
             </Col>
@@ -55,7 +61,10 @@ class TemaDosView extends Component {
               />
             </Col>
             <Col md="10" sm="10" className="">
-              <p style={{ marginBottom: '0px' }} className="animated rotateInDownRight delay-2s">
+              <p
+                style={{ marginBottom: '0px' }}
+                className="animated rotateInDownRight delay-2s"
+              >
                 Relajación. Es conveniente inspirar profundamente antes de
                 realizar responder una llamada.
               </p>
@@ -70,8 +79,11 @@ class TemaDosView extends Component {
                 className="img-fluid  animated rollIn delay-3s"
               />
             </Col>
-            <Col md="10" sm="10"  className="">
-              <p style={{ marginBottom: '0px' }} className="animated rotateInDownRight delay-3s">
+            <Col md="10" sm="10" className="">
+              <p
+                style={{ marginBottom: '0px' }}
+                className="animated rotateInDownRight delay-3s"
+              >
                 Actitud mental. Carácter alegre y disfrutar del trabajo; ser
                 capaz de poner al Cliente como centro de atención.
               </p>
