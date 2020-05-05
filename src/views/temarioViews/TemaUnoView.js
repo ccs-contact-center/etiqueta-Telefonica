@@ -11,7 +11,7 @@ class TemaUnoView extends Component {
     return (
       <div className="animated fadeIn">
         <CardHeader className="text-left">
-          <h3> Elementos de una etiqueta telefonica</h3>
+          <h3> Importancia de la Etiqueta Telefónica</h3>
         </CardHeader>
         <CardBody className="text-center">
           <Row>
