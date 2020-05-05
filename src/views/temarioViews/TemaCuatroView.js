@@ -12,12 +12,11 @@ class TemaDosView extends Component {
     return (
       <div className="animated fadeIn ">
         <CardHeader className="text-left">
-          <h3>Lineamientos generales de la Metodología</h3>
+          <h3>Importancia de la Etiqueta Telefónica</h3>
         </CardHeader>
         <CardBody className="">
           <Row>
             <Col xs="12 centrado-fila">
-             
               <img
                 src={Escuchaactiva}
                 style={{ width: 300 }}
@@ -27,8 +26,8 @@ class TemaDosView extends Component {
             </Col>
 
             <Col xs="12" className="text-center">
-              <br/>
-            <h1 className="animated zoomInLeft delay-1s">
+              <br />
+              <h1 className="animated zoomInLeft delay-1s">
                 <b>LA ESCUCHA ACTIVA</b>
               </h1>
             </Col>
