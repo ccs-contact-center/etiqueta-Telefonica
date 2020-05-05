@@ -17,7 +17,7 @@ class TemaDosView extends Component {
     return (
       <div className="animated fadeIn">
         <CardHeader className="text-left">
-          <h3>Lineamientos generales de la Metodología</h3>
+          <h3>Importancia de la Etiqueta Telefónica</h3>
         </CardHeader>
         <CardBody className="">
           <Row className="centrado-fila">
