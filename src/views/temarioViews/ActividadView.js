@@ -29,107 +29,12 @@ class ActividadView extends Component {
         <Row>
           <Col>
             <CardHeader className="">
-              <h2> Actividad</h2>
+              <h2>  Test de autoevaluación</h2>
             </CardHeader>
             <CardBody className="text-center">
-              <form onSubmit={this.handleSubmit}>
-                <label>
-                  Name:
-                  <input
-                    className=""
-                    type="text"
-                    value={this.state.value}
-                    onChange={this.handleChange}
-                  />
-                </label>
-                <input
-                  className="btn btn-primary"
-                  type="submit"
-                  value="Submit"
-                />
-              </form>
+             
 
               <Form>
-                <FormGroup row>
-                  <Label for="exampleEmail" sm={2}>
-                    Email
-                  </Label>
-                  <Col sm={10}>
-                    <Input
-                      type="email"
-                      name="email"
-                      id="exampleEmail"
-                      placeholder="with a placeholder"
-                    />
-                  </Col>
-                </FormGroup>
-                <FormGroup row>
-                  <Label for="examplePassword" sm={2}>
-                    Password
-                  </Label>
-                  <Col sm={10}>
-                    <Input
-                      type="password"
-                      name="password"
-                      id="examplePassword"
-                      placeholder="password placeholder"
-                    />
-                  </Col>
-                </FormGroup>
-                <FormGroup row>
-                  <Label for="exampleSelect" sm={2}>
-                    Select
-                  </Label>
-                  <Col sm={10}>
-                    <Input type="select" name="select" id="exampleSelect">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </Input>
-                  </Col>
-                </FormGroup>
-                <FormGroup row>
-                  <Label for="exampleSelectMulti" sm={2}>
-                    Select Multiple
-                  </Label>
-                  <Col sm={10}>
-                    <Input
-                      type="select"
-                      name="selectMulti"
-                      id="exampleSelectMulti"
-                      multiple
-                    >
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </Input>
-                  </Col>
-                </FormGroup>
-                <FormGroup row>
-                  <Label for="exampleText" sm={2}>
-                    Text Area
-                  </Label>
-                  <Col sm={10}>
-                    <Input type="textarea" name="text" id="exampleText" />
-                  </Col>
-                </FormGroup>
-                <FormGroup row>
-                  <Label for="exampleFile" sm={2}>
-                    File
-                  </Label>
-                  <Col sm={10}>
-                    <Input type="file" name="file" id="exampleFile" />
-                    <FormText color="muted">
-                      This is some placeholder block-level help text for the
-                      above input. It's a bit lighter and easily wraps to a new
-                      line.
-                    </FormText>
-                  </Col>
-                </FormGroup>
                 <FormGroup tag="fieldset" row>
                   <legend className="col-form-label col-sm-2">
                     Radio Buttons
