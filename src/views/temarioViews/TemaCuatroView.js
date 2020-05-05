@@ -22,12 +22,13 @@ class TemaDosView extends Component {
                 src={Escuchaactiva}
                 style={{ width: 300 }}
                 alt="Escuchaactiva"
-                className="img-fluid bordeImagen"
+                className="img-fluid bordeImagen animated zoomInLeft delay-0s"
               />
             </Col>
 
             <Col xs="12" className="text-center">
-            <h1>
+              <br/>
+            <h1 className="animated zoomInLeft delay-1s">
                 <b>LA ESCUCHA ACTIVA</b>
               </h1>
             </Col>
