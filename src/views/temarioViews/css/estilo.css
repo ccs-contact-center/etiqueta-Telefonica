@@ -207,6 +207,22 @@ td,th{
 		}
 	  }
 
+	  .paddingMarginBCero{
+		  padding-bottom: 0px !important;
+		  margin-bottom: 0px !important;
+	  }
+
+	  .bgTableTitle{
+		  background-color: #001f3e;
+	  }
+
+	  .bgTableContent{
+		  background-color: #b1cde6;
+	  }
+	  
+
+
+
 	 /* div{
 		border: solid 1px;
 	}  */
