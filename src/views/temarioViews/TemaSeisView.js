@@ -12,7 +12,7 @@ class TemaSeisView extends Component {
     return (
       <div className="animated fadeIn">
         <CardHeader className="text-left">
-          <h3>Elementos de la Etiqueta Telefónica</h3>
+          <h3>EMPATÍA</h3>
         </CardHeader>
         <CardBody className="">
           <Row className="centrado-fila">
@@ -25,11 +25,9 @@ class TemaSeisView extends Component {
               />
             </Col>
             <Col xs="6" sm="5" md="5">
-              <ul className="animated lightSpeedIn delay-1s">
-                <li>Un tono amistoso y cordial</li>
-                <li>Estar predispuesto a la ayuda</li>
-                <li>Una actitud de apertura mental y respeto</li>
-              </ul>
+              <p><b> Actitudes Empáticas:</b> Escuchar, sondear, detectar.</p>
+              <p><b>Actitudes No Empáticas:</b> interrumpir, quitarle la razón, imponer nuestro punto de vista, ser insensible a las necesidades del cliente. </p>
+              <p><b></b></p>
             </Col>
           </Row>
         </CardBody>
