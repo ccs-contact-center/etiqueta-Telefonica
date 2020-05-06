@@ -113,22 +113,19 @@ class ActividadView extends Component {
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
                       <b>
-                      
                         Con base a tu conocimiento relaciona las filas con las
                         columnas. El tema es "Escucha Activa"
                       </b>
                       <span style={{ color: 'red' }}>*</span>
                     </legend>
                     <Col sm={12}>
-                      <Table className="table-border ">
+                      <Table className="table-responsive">
                         <tr>
-                          <td>
+                          <td></td>
+                          <td class="align-middle" style={{paddingBottom:'0px'}}>
                             <Label check>Emisor</Label>
-                            <FormGroup check>
-                              <Input type="radio" name="radio2" />
-                            </FormGroup>
                           </td>
-                          <td>
+                          <td class="align-middle" style={{paddingBottom:'0px'}}>
                             <Label check>
                               <b>
                                 {' '}
@@ -136,47 +133,117 @@ class ActividadView extends Component {
                                 punto de vista del que habla (cliente).
                               </b>
                             </Label>
-                            <FormGroup check>
-                              <Input type="radio" name="radio2" />
-                            </FormGroup>
                           </td>
-                          <td>
+                          <td class="align-middle" style={{paddingBottom:'0px'}}>
                             <Label check>Canal</Label>
+                          </td>
+                          <td class="align-middle" style={{paddingBottom:'0px'}}>
+                            <Label check>Receptor</Label>
+                          </td>
+                          <td class="align-middle" style={{paddingBottom:'0px'}}>
+                            {' '}
+                            <Label check>Mensaje</Label>{' '}
+                          </td>
+                          <td class="align-middle" style={{paddingBottom:'0px'}}>
+                            <Label check>Solución Problema</Label>
+                          </td>
+                          <td class="align-middle" style={{paddingBottom:'0px'}}>
+                            <Label check>Escucha del problema</Label>
+                          </td>
+                          <td class="align-middle" style={{paddingBottom:'0px'}}>
+                            <Label check>
+                              Entender la solución desde el punto de vista del
+                              que habla (cliente). Comunicación telefónica.
+                              Interferencias
+                            </Label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-middle" style={{paddingTop:'0px'}}>Interferencias</td>
+                          <td style={{paddingTop:'0px'}}>
+                            <FormGroup check>
+                              <Input type="radio" name="radio2" />
+                            </FormGroup>
+                          </td>
+                          <td style={{paddingTop:'0px'}}>
+                            <FormGroup check>
+                              <Input type="radio" name="radio2" />
+                            </FormGroup>
+                          </td>
+                          <td style={{paddingTop:'0px'}}>
+                            <FormGroup check>
+                              <Input type="radio" name="radio2" />
+                            </FormGroup>
+                          </td>
+                          <td style={{paddingTop:'0px'}}>
+                            <FormGroup check>
+                              <Input type="radio" name="radio2" />
+                            </FormGroup>
+                          </td>
+                          <td style={{paddingTop:'0px'}}>
+                            {' '}
+                            <FormGroup check>
+                              <Input type="radio" name="radio2" />
+                            </FormGroup>
+                          </td>
+                          <td style={{paddingTop:'0px'}}>
+                            <FormGroup check>
+                              <Input type="radio" name="radio2" />
+                            </FormGroup>
+                          </td>
+                          <td style={{paddingTop:'0px'}}>
+                            <FormGroup check>
+                              <Input type="radio" name="radio2" />
+                            </FormGroup>
+                          </td>
+                          <td style={{paddingTop:'0px'}}>
+                            <FormGroup check>
+                              <Input type="radio" name="radio2" />
+                            </FormGroup>
+                          </td>
+                        </tr>
+
+
+                        {/* <p></p> */}
+                        <tr>
+                          <td>Comunicación telefónica.</td>
+                          <td>
                             <FormGroup check>
                               <Input type="radio" name="radio2" />
                             </FormGroup>
                           </td>
                           <td>
-                            <Label check>Receptor</Label>
+                            <FormGroup check>
+                              <Input type="radio" name="radio2" />
+                            </FormGroup>
+                          </td>
+                          <td>
+                            <FormGroup check>
+                              <Input type="radio" name="radio2" />
+                            </FormGroup>
+                          </td>
+                          <td>
                             <FormGroup check>
                               <Input type="radio" name="radio2" />
                             </FormGroup>
                           </td>
                           <td>
                             {' '}
-                            <Label check>Mensaje</Label>{' '}
                             <FormGroup check>
                               <Input type="radio" name="radio2" />
                             </FormGroup>
                           </td>
                           <td>
-                            <Label check>Solución Problema</Label>
                             <FormGroup check>
                               <Input type="radio" name="radio2" />
                             </FormGroup>
                           </td>
                           <td>
-                            <Label check>Escucha del problema</Label>
                             <FormGroup check>
                               <Input type="radio" name="radio2" />
                             </FormGroup>
                           </td>
                           <td>
-                            <Label check>
-                              Entender la solución desde el punto de vista del
-                              que habla (cliente). Comunicación telefónica.
-                              Interferencias
-                            </Label>
                             <FormGroup check>
                               <Input type="radio" name="radio2" />
                             </FormGroup>
