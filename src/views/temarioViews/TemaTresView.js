@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Card, CardBody, CardHeader, Col, Row, Button } from 'reactstrap'
-import elemetos from '../../assets/img/ImgEtiquetaTelefonica/elemetos.png'
+import esquema01 from '../../assets/img/ImgEtiquetaTelefonica/esquema-01.png'
 class TemaDosView extends Component {
   loading = () => (
     <div className="animated fadeIn pt-1 text-center">Cargando...</div>
@@ -10,48 +10,43 @@ class TemaDosView extends Component {
     return (
       <div className="animated fadeIn">
         <CardHeader className="text-left">
-          <h3>Importancia de la Etiqueta Telefónica</h3>
+          <h3>Escucha activa</h3>
         </CardHeader>
         <CardBody>
           <Row>
+            <Col xs="12" className="">
+              <p
+                style={{ marginBottom: '0px' }}
+                className="animated rotateInDownRight delay-1s"
+              >
+                <b>Comunicación telefónica.</b>
+              </p>
+              
+               <p
+                style={{ marginBottom: '0px' }}
+                className="animated rotateInDownRight delay-1s"
+              >
+                Escuchar y entender la comunicación desde el punto de vista del que habla (cliente).
+
+              </p>
+              <br/>
+              <p
+                style={{ marginBottom: '0px' }}
+                className="animated rotateInDownRight delay-2s"
+              >
+                <b>Interferencias.</b>
+              </p>
+            </Col>
+            
             <Col xs="12" className="centrado-fila">
               <img
-                src={elemetos}
-                style={{ width: 250 }}
-                alt="elemetos"
-                className="img-fluid animated bounceInRight delay-0s "
+                src={esquema01}
+                style={{ width: 350 }}
+                alt="esquema-01.png"
+                className="img-fluid animated bounceInRight delay-3s "
               />
             </Col>
-            <Col xs="12" className="centrado-fila mb-2">
-              <div
-                className="cajaA1 animated bounceInRight delay-1s"
-                style={{ width: '250px' }}
-              >
-                <p className="text-center" style={{ marginBottom: '0px' }}>
-                  <b>ENTONACIÓN</b>
-                </p>
-              </div>
-            </Col>
-            <Col xs="12" className="centrado-fila mb-2">
-              <div
-                className="cajaA1 animated bounceInRight delay-2s"
-                style={{ width: '250px' }}
-              >
-                <p className="text-center" style={{ marginBottom: '0px' }}>
-                  <b>ARTICULACIÓN</b>
-                </p>
-              </div>
-            </Col>
-            <Col xs="12" className="centrado-fila">
-              <div
-                className="cajaA1 animated bounceInRight delay-3s"
-                style={{ width: '250px' }}
-              >
-                <p className="text-center" style={{ marginBottom: '0px' }}>
-                  <b>LOCUCIÓN O RITMO</b>{' '}
-                </p>
-              </div>
-            </Col>
+           
           </Row>
         </CardBody>
       </div>
