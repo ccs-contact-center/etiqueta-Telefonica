@@ -10,7 +10,8 @@ import {
   Label,
   Input,
   Table,
-} from 'reactstrap'
+} from 'reactstrap';
+import SweetAlert from 'sweetalert2-react';
 
 class ActividadView extends Component {
   loading = () => (
@@ -37,6 +38,12 @@ class ActividadView extends Component {
   render() {
     return (
       <div className="animated fadeIn">
+        <SweetAlert
+        show={this.state.show}
+        title="Enviado"
+        text="Respuestas enviadas...."
+        onConfirm={() => this.setState({ show: false })}
+      />
         <Row>
           <Col>
             <CardHeader className="">
@@ -323,7 +330,7 @@ class ActividadView extends Component {
 
                 <FormGroup check row>
                   <Col className="centrado-fila" sm={{ size: 10 }}>
-                    <Button color="primary">Enviar</Button>
+                    <Button color="primary" onClick={() => this.setState({ show: true })}>Enviar</Button>
                   </Col>
                 </FormGroup>
               </Form>
