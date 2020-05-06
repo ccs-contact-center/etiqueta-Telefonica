@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { CardBody, CardHeader, Col, Row } from 'reactstrap'
-//import Example from './componentsExtras/tablas'
+import Example from './componentsExtras/tablas'
 import tabla01 from '../../assets/img/ImgEtiquetaTelefonica/tabla01.jpg'
 
 class TemaDosView extends Component {
@@ -17,12 +17,12 @@ class TemaDosView extends Component {
         <CardBody className="">
           <Row>
             <Col xs="12 centrado-fila">
-              <img
-                src={tabla01}
-                style={{ width: 650 }}
-                alt="esquema-01.png"
-                className="img-fluid animated bounceInRight delay-3s "
-              />
+              <div
+                style={{ width: '60%' }}
+                className="animated bounceInRight delay-3s"
+              >
+                <Example />
+              </div>
             </Col>
           </Row>
         </CardBody>
