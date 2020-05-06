@@ -46,8 +46,8 @@ class ActividadView extends Component {
               <Form>
                 <div className="cajaA2" style={{ backgroundColor: '#d5d4d8' }}>
                   <FormGroup tag="fieldset" row>
-                    <legend className="col-form-label ">
-                      ¿Qué es etiqueta telefónica?{' '}
+                    <legend className="col-form-label ml-2">
+                      <b>¿Qué es etiqueta telefónica?</b>{' '}
                       <span style={{ color: 'red' }}>*</span>
                     </legend>
                     <Col sm={12}>
@@ -76,8 +76,8 @@ class ActividadView extends Component {
                   style={{ backgroundColor: '#d5d4d8' }}
                 >
                   <FormGroup tag="fieldset" row>
-                    <legend className="col-form-label ">
-                      La imagen corporativa se trata de:{' '}
+                    <legend className="col-form-label ml-2">
+                      <b> La imagen corporativa se trata de:</b>{' '}
                       <span style={{ color: 'red' }}>*</span>
                     </legend>
                     <Col sm={12}>
@@ -107,13 +107,16 @@ class ActividadView extends Component {
                 </div>
 
                 <div
-                  className="cajaA2 mt-3 text-center"
+                  className="cajaA2 mt-3 "
                   style={{ backgroundColor: '#d5d4d8' }}
                 >
                   <FormGroup tag="fieldset" row>
-                    <legend className="col-form-label ">
-                      Con base a tu conocimiento relaciona las filas con las
-                      columnas. El tema es "Escucha Activa"{' '}
+                    <legend className="col-form-label ml-2">
+                      <b>
+                      
+                        Con base a tu conocimiento relaciona las filas con las
+                        columnas. El tema es "Escucha Activa"
+                      </b>
                       <span style={{ color: 'red' }}>*</span>
                     </legend>
                     <Col sm={12}>
@@ -127,8 +130,11 @@ class ActividadView extends Component {
                           </td>
                           <td>
                             <Label check>
-                              Escuchar y entender la comunicación desde el punto
-                              de vista del que habla (cliente).
+                              <b>
+                                {' '}
+                                Escuchar y entender la comunicación desde el
+                                punto de vista del que habla (cliente).
+                              </b>
                             </Label>
                             <FormGroup check>
                               <Input type="radio" name="radio2" />
@@ -181,9 +187,76 @@ class ActividadView extends Component {
                   </FormGroup>
                 </div>
 
+                <div
+                  className="cajaA2 mt-3"
+                  style={{ backgroundColor: '#d5d4d8' }}
+                >
+                  <FormGroup tag="fieldset" row>
+                    <legend className="col-form-label ml-2">
+                      <b>
+                        {' '}
+                        Hablando de "Gestión de tiempos". ¿Cuánto es el tiempo
+                        recomendado para retomar una llamada que se dejó en
+                        "Hold"?
+                      </b>{' '}
+                      <span style={{ color: 'red' }}>*</span>
+                    </legend>
+                    <Col sm={12}>
+                      <FormGroup check>
+                        <Input type="radio" name="radio4" />
+                        <Label check>De 30 a 45 segundos.</Label>
+                      </FormGroup>
+                      <FormGroup check>
+                        <Input type="radio" name="radio5" />
+                        <Label check>De 45 a 60 segundos. </Label>
+                      </FormGroup>
+                      <FormGroup check>
+                        <Input type="radio" name="radio6" />
+                        <Label check>De 10 a 30 segundos.</Label>
+                      </FormGroup>
+                    </Col>
+                  </FormGroup>
+                </div>
+
+                <div
+                  className="cajaA2 mt-3"
+                  style={{ backgroundColor: '#d5d4d8' }}
+                >
+                  <FormGroup tag="fieldset" row>
+                    <legend className="col-form-label ml-2">
+                      <b> ¿Cuáles son las actitudes empáticas?</b>{' '}
+                      <span style={{ color: 'red' }}>*</span>
+                    </legend>
+                    <Col sm={12}>
+                      <FormGroup check>
+                        <Input type="radio" name="radio4" />
+                        <Label check>Escuchar, sondear, detectar.</Label>
+                      </FormGroup>
+                      <FormGroup check>
+                        <Input type="radio" name="radio5" />
+                        <Label check>
+                          Interrumpir, quitarle la razón, imponer nuestro punto
+                          de vista, ser insensible a las necesidades del
+                          cliente.{' '}
+                        </Label>
+                      </FormGroup>
+                      <FormGroup check>
+                        <Input type="radio" name="radio6" />
+                        <Label check>
+                          Escuchar, sondear, detectar, interrumpir, quitarle la
+                          razón, imponer nuestro punto de vista, ser insensible
+                          a las necesidades del cliente.
+                        </Label>
+                      </FormGroup>
+                    </Col>
+                  </FormGroup>
+                </div>
+
+                <br />
+
                 <FormGroup check row>
-                  <Col sm={{ size: 10 }} className="centrado-fila">
-                    <Button>Submit</Button>
+                  <Col className="centrado-fila" sm={{ size: 10 }}>
+                    <Button color="primary">Enviar</Button>
                   </Col>
                 </FormGroup>
               </Form>
