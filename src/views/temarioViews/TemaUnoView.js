@@ -24,16 +24,15 @@ class TemaUnoView extends Component {
               />
             </Col>
             <Col xs="12 mt-3">
-              <h1 className="animated slideInUp"><b>¿Qué es etiqueta telefónica?</b></h1>
-              <h2 className="animated slideInUp">Manera “asertiva“ de tratar al cliente. </h2>
+              <p className="animated slideInUp" style={{marginBottom:'0px'}}><b>¿Qué es etiqueta telefónica?</b></p>
+              <p className="animated slideInUp">Manera “asertiva“ de tratar al cliente. </p>
             </Col>
             <Col xs="12">
-              <h1 className="animated slideInUp"><b>IMPORTANCIA DE LA ETIQUETA TELEFÓNICA </b></h1>
-              <h2 className="animated slideInUp">La forma en que se contesta el teléfono dice mucho de la empresa y también de la persona.</h2>
+              <p className="animated slideInUp" style={{marginBottom:'0px'}}><b>IMPORTANCIA DE LA ETIQUETA TELEFÓNICA </b></p>
+              <p className="animated slideInUp">La forma en que se contesta el teléfono dice mucho de la empresa y también de la persona.</p>
             </Col>
             <Col xs="12">
-              <h1 className="animated slideInUp"><b>ALGUNAS REGLAS</b></h1>
-              <h2 className="animated slideInUp"><b> Imagen corporativa, Escucha activa, Gestión de silencios, Empatía, Resolución de problemas.</b></h2>
+              <p className="animated slideInUp" style={{marginBottom:'0px'}}><b>ALGUNAS REGLAS:</b> Imagen corporativa, Escucha activa, Gestión de silencios, Empatía, Resolución de problemas.</p>
             </Col>
           </Row>
         </CardBody>
