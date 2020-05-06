@@ -11,7 +11,7 @@ class TemaDosView extends Component {
     return (
       <div className="animated fadeIn ">
         <CardHeader className="text-left">
-          <h3>Importancia de la Etiqueta Telefónica</h3>
+          <h3>Imagen corporativa</h3>
         </CardHeader>
         <CardBody className="">
           <Row className="centrado-fila">
@@ -26,66 +26,46 @@ class TemaDosView extends Component {
             <Col md="10" sm="10" className="">
               <p
                 style={{ marginBottom: '0px' }}
-                className="animated rotateInDownRight delay-0s"
+                className="animated rotateInDownRight delay-1s"
               >
-                La actitud es la manera de actuar de una persona, es decir, el
-                comportamiento que emplea un individuo para hacer las cosas.
+                <b>Imagen corporativaAgente telefónico se encarga de:</b>
               </p>
-            </Col>
-          </Row>
-          <Row className="centrado-fila">
-            <Col md="1" sm="2" className="centrado-fila">
-              <img
-                src={icono}
-                style={{ width: 60 }}
-                alt="icono.png"
-                className="img-fluid  animated rollIn delay-1s"
-              />
-            </Col>
-            <Col md="10" sm="10" className="">
               <p
                 style={{ marginBottom: '0px' }}
                 className="animated rotateInDownRight delay-1s"
               >
-                Concentración. El teléfono exige exclusividad y concentración.
+                Crear un ambiente agradable para el usuario, dejando una buena
+                imagen de la empresa.
               </p>
-            </Col>
-          </Row>
-          <Row className="centrado-fila">
-            <Col md="1" sm="2" className="centrado-fila">
-              <img
-                src={icono}
-                style={{ width: 60 }}
-                alt="icono.png"
-                className="img-fluid  animated rollIn delay-2s"
-              />
-            </Col>
-            <Col md="10" sm="10" className="">
+              <br/>
               <p
                 style={{ marginBottom: '0px' }}
                 className="animated rotateInDownRight delay-2s"
               >
-                Relajación. Es conveniente inspirar profundamente antes de
-                realizar responder una llamada.
+                <b>Responsabilidad</b>.
               </p>
-            </Col>
-          </Row>
-          <Row className="centrado-fila">
-            <Col md="1" sm="2" className="centrado-fila">
-              <img
-                src={icono}
-                style={{ width: 60 }}
-                alt="icono.png"
-                className="img-fluid  animated rollIn delay-3s"
-              />
-            </Col>
-            <Col md="10" sm="10" className="">
+              <p
+                style={{ marginBottom: '0px' }}
+                className="animated rotateInDownRight delay-2s"
+              >
+                Seguir los procedimientos del servicio. Garantizar que le
+                cliente quede satisfecho.
+              </p>
+              <br/>
               <p
                 style={{ marginBottom: '0px' }}
                 className="animated rotateInDownRight delay-3s"
               >
-                Actitud mental. Carácter alegre y disfrutar del trabajo; ser
-                capaz de poner al Cliente como centro de atención.
+                <b>Herramientas de apoyo.</b>
+              </p>
+              
+              <p
+                style={{ marginBottom: '0px' }}
+                className="animated rotateInDownRight delay-3s"
+              >
+                (Jefe de Operación, Supervisores, Capacitación, Calidad ),
+                tienen como misión, informar , formar y dar apoyo al agente,
+                para alcanzar sus objetivos.
               </p>
             </Col>
           </Row>
