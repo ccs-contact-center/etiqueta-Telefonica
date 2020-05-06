@@ -17,17 +17,17 @@ export default {
             {
               name: '¿QUÉ ES ETIQUETA TELEFONICA?',
               // url: '/temarioViews/BienvenidaView',
-              icon: 'icon-directions',
+              icon: 'icon-direction',
             },
             {
               name: 'IMPORTANCIA DE LA ETIQUETA TELEFÓNICA ',
               // url: '/temarioViews/BienvenidaView',
-              icon: 'icon-directions',
+              icon: 'icon-direction',
             },
             {
               name: 'ALGUNAS REGLAS ',
               // url: '/temarioViews/BienvenidaView',
-              icon: 'icon-directions',
+              icon: 'icon-direction',
             },
           ],
         },
@@ -46,12 +46,12 @@ export default {
             {
               name: 'RESPONSABILIDAD',
               // url: '/temarioViews/BienvenidaView',
-              icon: 'icon-directions',
+              icon: 'icon-direction',
             },
             {
               name: 'HERRAMIENTA DE APOYO ',
               // url: '/temarioViews/BienvenidaView',
-              icon: 'icon-directions',
+              icon: 'icon-direction',
             },
           ],
         },
