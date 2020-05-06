@@ -1,11 +1,5 @@
 import React, { Component } from 'react'
-import {
-  CardBody,
-  CardHeader,
-  Col,
-  Row,
-
-} from 'reactstrap'
+import { CardBody, CardHeader, Col, Row } from 'reactstrap'
 import Atencion from '../../assets/img/ImgEtiquetaTelefonica/atencion-a-clientes-tn.jpg'
 
 class TemaDosView extends Component {
@@ -17,7 +11,7 @@ class TemaDosView extends Component {
     return (
       <div className="animated fadeIn">
         <CardHeader className="text-left">
-          <h3>Importancia de la Etiqueta Telefónica</h3>
+          <h3>GESTIÓN DE SILENCIOS</h3>
         </CardHeader>
         <CardBody className="">
           <Row className="centrado-fila">
@@ -30,13 +24,15 @@ class TemaDosView extends Component {
               />
             </Col>
             <Col xs="6">
-              <ul className="animated zoomInRight delay-1s">
-                <li>Reformulación o Paráfrasis</li>
-                <li>Hacer preguntas (sondear)</li>
-                <li>Empatizar</li>
-                <li>Refuerzo Positivo</li>
-                <li>Silencio</li>
-              </ul>
+              <p>
+                Visión más amplia de las posibilidades existentes de un ambiente
+                para resolver determinada situación.
+              </p>
+              <p>Manejo de silencios durante la llamada.</p>
+              <p>
+                El uso del “Hold”, recomendación, retomar la llamada en un lapso
+                de 30 a 45 segundos.
+              </p>
             </Col>
           </Row>
         </CardBody>
