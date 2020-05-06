@@ -25,7 +25,7 @@ class ObjetivoView extends Component {
                   <ul>
                     <li>Tiempos de conversación.</li>
                     <li>Resolución de incidencias.</li>
-                    <p>Cliente satisfecho.</p>
+                    <li>Cliente satisfecho.</li>
                   </ul>
                 </div>
               </Col>
