@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { CardBody, CardHeader, Col, Row } from 'reactstrap'
-
-import Escuchaactiva from '../../assets/img/ImgEtiquetaTelefonica/escucha-activa.jpg'
+//import Example from './componentsExtras/tablas'
+import tabla01 from '../../assets/img/ImgEtiquetaTelefonica/tabla01.jpg'
 
 class TemaDosView extends Component {
   loading = () => (
@@ -12,24 +12,17 @@ class TemaDosView extends Component {
     return (
       <div className="animated fadeIn ">
         <CardHeader className="text-left">
-          <h3>Importancia de la Etiqueta Telefónica</h3>
+          <h3>FRASES ETIQUETA TELEFÓNICA </h3>
         </CardHeader>
         <CardBody className="">
           <Row>
             <Col xs="12 centrado-fila">
               <img
-                src={Escuchaactiva}
-                style={{ width: 300 }}
-                alt="Escuchaactiva"
-                className="img-fluid bordeImagen animated zoomInLeft delay-0s"
+                src={tabla01}
+                style={{ width: 650 }}
+                alt="esquema-01.png"
+                className="img-fluid animated bounceInRight delay-3s "
               />
-            </Col>
-
-            <Col xs="12" className="text-center">
-              <br />
-              <h1 className="animated zoomInLeft delay-1s">
-                <b>LA ESCUCHA ACTIVA</b>
-              </h1>
             </Col>
           </Row>
         </CardBody>
