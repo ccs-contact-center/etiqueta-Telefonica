@@ -15,24 +15,106 @@ class TemaUnoView extends Component {
         </CardHeader>
         <CardBody className="">
           <Row>
+            <Col xs="12 mt-3">
+              <p
+                className="animated slideInUp mb-2"
+                style={{ marginBottom: '0px' }}
+              >
+                Empecemos por saber primeramente…
+              </p>
+              <h2
+                className="animated slideInUp text-center mb-2"
+                style={{ marginBottom: '0px' }}
+              >
+                <b>¿Qué es la Etiqueta Telefónica?</b>
+              </h2>
+              <p>
+                Es un código de cortesía que se utiliza desde los inicios de los
+                call centers con el fin de ordenar el discurso de los agentes y
+                ofrecer a los clientes una atención{' '}
+                <b className="text-danger">amable</b> y{' '}
+                <b className="text-danger">homogénea</b>, ocupando:
+              </p>
+            </Col>
             <Col xs="12" className="text-center">
+              <Row>
+                <Col xs="12" className="centrado-fila mb-4">
+                  <div className="cajaA2" style={{width:'80%'}}>
+                    <div
+                      className="bg-danger pl-3 pr-3"
+                      style={{ marginTop: '-30px' }}
+                    >
+                      <p
+                        className="text-center "
+                        style={{ marginBottom: '0px' }}
+                      >
+                        Orden.
+                      </p>
+                    </div>
+                  </div>
+                </Col>
+                <Col xs="12" className="centrado-fila mb-4">
+                  <div className="cajaA2" style={{width:'80%'}}>
+                    <div
+                      className="bg-danger pl-3 pr-3"
+                      style={{ marginTop: '-30px' }}
+                    >
+                      <p
+                        className="text-center "
+                        style={{ marginBottom: '0px' }}
+                      >
+                        Frases y palabras de cortesía y buenos modales.
+                      </p>
+                    </div>
+                  </div>
+                </Col>
+                <Col xs="12" className="centrado-fila mb-4">
+                  <div className="cajaA2" style={{width:'80%'}}>
+                    <div
+                      className="bg-danger pl-3 pr-3"
+                      style={{ marginTop: '-30px' }}
+                    >
+                      <p
+                        className="text-center "
+                        style={{ marginBottom: '0px' }}
+                      >
+                        Elegancia en pronunciar bien las palabras
+                      </p>
+                    </div>
+                  </div>
+                </Col>
+                <Col xs="12" className="centrado-fila mb-4">
+                  <div className="cajaA2" style={{width:'80%'}}>
+                    <div
+                      className="bg-danger pl-3 pr-3"
+                      style={{ marginTop: '-30px' }}
+                    >
+                      <p
+                        className="text-center "
+                        style={{ marginBottom: '0px' }}
+                      >
+                        Vocabulario adecuado.
+                      </p>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Col>
+            <Col xs="12 mt-3">
+              <p
+                className="animated slideInUp text-center"
+                style={{ marginBottom: '0px' }}
+              >
+                Es la imagen de la empresa, asesor, producto y/o servicio.
+              </p>
+            </Col>
+            <Col xs="12 mt-3 centrado-fila">
               <img
                 src={actitudPositiva}
-                style={{ width: 250}}
+                style={{ width: 250 }}
                 alt="actitudPositiva"
                 className="img-fluid bordeImagen animated slideInUp "
               />
-            </Col>
-            <Col xs="12 mt-3">
-              <p className="animated slideInUp" style={{marginBottom:'0px'}}><b>¿Qué es etiqueta telefónica?</b></p>
-              <p className="animated slideInUp">Manera “asertiva“ de tratar al cliente. </p>
-            </Col>
-            <Col xs="12">
-              <p className="animated slideInUp" style={{marginBottom:'0px'}}><b>IMPORTANCIA DE LA ETIQUETA TELEFÓNICA </b></p>
-              <p className="animated slideInUp">La forma en que se contesta el teléfono dice mucho de la empresa y también de la persona.</p>
-            </Col>
-            <Col xs="12">
-              <p className="animated slideInUp" style={{marginBottom:'0px'}}><b>ALGUNAS REGLAS:</b> Imagen corporativa, Escucha activa, Gestión de silencios, Empatía, Resolución de problemas.</p>
             </Col>
           </Row>
         </CardBody>
