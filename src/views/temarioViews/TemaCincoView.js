@@ -11,28 +11,78 @@ class TemaDosView extends Component {
     return (
       <div className="animated fadeIn">
         <CardHeader className="text-left">
-          <h3>GESTIÓN DE SILENCIOS</h3>
+          <h3>ETIQUETA TELEFÓNICA</h3>
         </CardHeader>
         <CardBody className="">
-          <Row className="centrado-fila">
-            <Col xs="6 centrado-fila">
+          <Row>
+            <Col xs="12">
+              <h2>
+                <b>ESTRUCTURA DE LLAMADA:</b>
+              </h2>
+              <p className="centrado-fila">Siempre ocupa durante tu llamada:</p>
+            </Col>
+          </Row>
+          <Row className="centrado-fila mt-4">
+            <Col xs="6" className="centrado-fila">
+              <p className="text-center">
+                <b className="text-danger">Actitud amable</b>
+                <br />
+                Sonreír cuando se tome la llamada que o se realice.
+              </p>
+            </Col>
+            <Col xs="6"></Col>
+          </Row>
+          <Row className="centrado-fila ">
+            <Col xs="6"></Col>
+            <Col xs="6" className="centrado-fila">
+              <p className="text-center">
+                <b className="text-danger">Empatía</b>
+                <br />
+                Darse la oportunidad de entender las cosas desde el punto de
+                vista del otro.
+              </p>
+            </Col>
+          </Row>
+          <Row className="centrado-fila ">
+            <Col xs="6" className="centrado-fila">
+              <p className="text-center">
+                <b className="text-danger">Escucha activa</b>
+                <br />
+                Atender y analizar cada palabra del usuario para poder ofrecer
+                la mejor alternativa.
+              </p>
+            </Col>
+            <Col xs="6"></Col>
+          </Row>
+          <Row className="centrado-fila ">
+            <Col xs="6"></Col>
+            <Col xs="6" className="centrado-fila">
+              <p className="text-center">
+                <b className="text-danger">Asertividad</b>
+                <br />
+                Decir las cosas de manera adecuada, en el momento preciso, sin
+                ser agresivo ni dócil.
+              </p>
+            </Col>
+          </Row>
+          <Row className="centrado-fila ">
+            <Col xs="6" className="centrado-fila">
+              <p className="text-center">
+                <b className="text-danger">Paráfrasis</b>
+                <br />
+                Poner en propias palabras la idea del cliente.
+              </p>
+            </Col>
+            <Col xs="6"></Col>
+          </Row>
+          <Row>
+            <Col xs="12" className="centrado-fila">
               <img
                 src={Atencion}
                 style={{ width: 360 }}
                 alt="atencion-a-clientes-tn"
                 className="img-fluid bordeImagen  animated zoomInLeft delay-0s "
               />
-            </Col>
-            <Col xs="6">
-              <p>
-                Visión más amplia de las posibilidades existentes de un ambiente
-                para resolver determinada situación.
-              </p>
-              <p>Manejo de silencios durante la llamada.</p>
-              <p>
-                El uso del “Hold”, recomendación, retomar la llamada en un lapso
-                de 30 a 45 segundos.
-              </p>
             </Col>
           </Row>
         </CardBody>
