@@ -22,12 +22,12 @@ class TemaDosView extends Component {
                <b> Ahora, Elaboremos:</b>
               </p>
               <ul
-                style={{ marginBottom: '0px' }}
+               
                 className="animated"
               >
                 <li className="ulImg">Estructura básica de llamada.</li>
-                <li>Habilidades necesarias.</li>
-                <li>Habilidades técnicas.</li>
+                <li className="ulImg">Habilidades necesarias.</li>
+                <li className="ulImg">Habilidades técnicas.</li>
               </ul>
             </Col>
 
