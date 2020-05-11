@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { CardBody, CardHeader, Col, Row } from 'reactstrap'
 
-import servicio from '../../assets/img/ImgEtiquetaTelefonica/servicio.png'
+import Habilidades from '../../assets/img/ImgEtiquetaTelefonica/HABILIDADES.png'
 
 class TemaSeisView extends Component {
   loading = () => (
@@ -16,18 +16,64 @@ class TemaSeisView extends Component {
         </CardHeader>
         <CardBody className="">
           <Row className="centrado-fila">
-            <Col xs="6" sm="5" md="5" className="centrado-fila">
+            <Col xs="10" className="centrado-fila">
+              <div style={{ width: '200px' }} className="borderCaja">
+                <p className="">
+                  <b className="text-danger">Personalizar.</b>
+                  <br />
+                </p>
+                <p className="text-center">
+                  Mencionando el nombre o titulo del cliente por lo menos en
+                  tres ocasiones.
+                </p>
+              </div>
+            </Col>
+            <Col xs="10" className="mt-3">
+              <div style={{ width: '200px' }} className="borderCaja">
+                <p className="">
+                  <b className="text-danger">Evita frases negativas.</b>
+                  <br />
+                </p>
+                <p className="text-center">
+                  “No tenemos…”, no tenemos… Ya que estas pueden ser sustituidas
+                  con frases como “por el momento solo contamos con… ”.
+                </p>
+              </div>
+            </Col>
+          </Row>
+          <Row className="centrado-fila mt-3">
+            <Col xs="6" sm="4" md="4" className="centrado-fila">
+              <div
+                style={{ width: '200px' }}
+                className="borderCaja float-right"
+              >
+                <p className="">
+                  <b className="text-danger">La voz.</b>
+                  <br />
+                </p>
+                <p className="text-center">
+                  Nuestra voz, en de suma importancia, ya que el impacto que
+                  posee en el cliente de un 85% del efecto de la comunicación
+                  total.
+                </p>
+                <p className="">
+                  <b className="text-danger">El volumen de la voz debe ser. </b>
+                  <br />
+                </p>
+                <ul>
+                  <li>Firme.</li>
+                  <li>Sin gritar.</li>
+                  <li>Ni hablar muy bajo ya que denota inseguridad. </li>
+                </ul>
+              </div>
+            </Col>
+            <Col xs="6" sm="6" md="4">
               <img
-                src={servicio}
+                src={Habilidades}
                 style={{ width: 360 }}
-                alt="servicio"
+                alt="Habilidades.png"
                 className="img-fluid bordeImagen animated lightSpeedIn delay-0s"
               />
-            </Col>
-            <Col xs="6" sm="5" md="5">
-              <p><b> Actitudes Empáticas:</b> Escuchar, sondear, detectar.</p>
-              <p><b>Actitudes No Empáticas:</b> interrumpir, quitarle la razón, imponer nuestro punto de vista, ser insensible a las necesidades del cliente. </p>
-              <p><b></b></p>
             </Col>
           </Row>
         </CardBody>
