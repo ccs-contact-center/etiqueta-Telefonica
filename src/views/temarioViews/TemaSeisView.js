@@ -12,10 +12,16 @@ class TemaSeisView extends Component {
     return (
       <div className="animated fadeIn">
         <CardHeader className="text-left">
-          <h3>EMPATÍA</h3>
+          <h3>ETIQUETA TELEFÓNICA</h3>
         </CardHeader>
         <CardBody className="">
           <Row className="centrado-fila">
+            <Col xs="12" >
+            <h2>
+                <b>HABILIDADES NECESARIAS</b>
+              </h2>
+              <p className="text-center">No olvides que durante tu llamada debemos:</p>
+            </Col>
             <Col xs="10" className="centrado-fila">
               <div style={{ width: '200px' }} className="borderCaja">
                 <p className="">
