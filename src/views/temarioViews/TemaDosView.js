@@ -11,11 +11,17 @@ class TemaDosView extends Component {
     return (
       <div className="animated fadeIn ">
         <CardHeader className="text-left">
-          <h3>Imagen corporativa</h3>
+          <h3>ETIQUETA TELEFÓNICA</h3>
         </CardHeader>
         <CardBody className="">
           <Row className="centrado-fila">
             <Col md="1" sm="2" className="centrado-fila ">
+              <p
+                style={{ marginBottom: '0px' }}
+                className="animated rotateInDownRight delay-1s"
+              >
+                <b>¿Porqué es importante la Etiqueta Telefónica?</b>
+              </p>
               <img
                 src={icono}
                 style={{ width: 60 }}
@@ -28,16 +34,10 @@ class TemaDosView extends Component {
                 style={{ marginBottom: '0px' }}
                 className="animated rotateInDownRight delay-1s"
               >
-                <b>Imagen corporativaAgente telefónico se encarga de:</b>
-              </p>
-              <p
-                style={{ marginBottom: '0px' }}
-                className="animated rotateInDownRight delay-1s"
-              >
                 Crear un ambiente agradable para el usuario, dejando una buena
                 imagen de la empresa.
               </p>
-              <br/>
+              <br />
               <p
                 style={{ marginBottom: '0px' }}
                 className="animated rotateInDownRight delay-2s"
@@ -51,14 +51,14 @@ class TemaDosView extends Component {
                 Seguir los procedimientos del servicio. Garantizar que le
                 cliente quede satisfecho.
               </p>
-              <br/>
+              <br />
               <p
                 style={{ marginBottom: '0px' }}
                 className="animated rotateInDownRight delay-3s"
               >
                 <b>Herramientas de apoyo.</b>
               </p>
-              
+
               <p
                 style={{ marginBottom: '0px' }}
                 className="animated rotateInDownRight delay-3s"
