@@ -219,6 +219,11 @@ td,th{
 	  .bgTableContent{
 		  background-color: #b1cde6;
 	  }
+
+	 .ulImg  {
+		list-style: square inside url("../../../assets/img/ImgEtiquetaTelefonica/check.png");
+		
+	  }
 	  
 
 
