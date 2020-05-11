@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Card, CardBody, CardHeader, Col, Row, Button } from 'reactstrap'
-import esquema01 from '../../assets/img/ImgEtiquetaTelefonica/esquema-01.png'
+import AscuchaActiva from '../../assets/img/ImgEtiquetaTelefonica/escucha-activa.jpg'
 class TemaDosView extends Component {
   loading = () => (
     <div className="animated fadeIn pt-1 text-center">Cargando...</div>
@@ -10,43 +10,35 @@ class TemaDosView extends Component {
     return (
       <div className="animated fadeIn">
         <CardHeader className="text-left">
-          <h3>Escucha activa</h3>
+          <h3>ETIQUETA TELEFÓNICA</h3>
         </CardHeader>
         <CardBody>
-          <Row>
-            <Col xs="12" className="">
+          <Row className="centrado-fila">
+            <Col xs="4" className="">
               <p
                 style={{ marginBottom: '0px' }}
-                className="animated rotateInDownRight delay-1s"
+                className="text-center animated "
               >
-                <b>Comunicación telefónica.</b>
+               <b> Ahora, Elaboremos:</b>
               </p>
-              
-               <p
+              <ul
                 style={{ marginBottom: '0px' }}
-                className="animated rotateInDownRight delay-1s"
+                className="animated"
               >
-                Escuchar y entender la comunicación desde el punto de vista del que habla (cliente).
-
-              </p>
-              <br/>
-              <p
-                style={{ marginBottom: '0px' }}
-                className="animated rotateInDownRight delay-2s"
-              >
-                <b>Interferencias.</b>
-              </p>
+                <li className="ulImg">Estructura básica de llamada.</li>
+                <li>Habilidades necesarias.</li>
+                <li>Habilidades técnicas.</li>
+              </ul>
             </Col>
-            
-            <Col xs="12" className="centrado-fila">
+
+            <Col xs="4" className="centrado-fila">
               <img
-                src={esquema01}
+                src={AscuchaActiva}
                 style={{ width: 350 }}
-                alt="esquema-01.png"
-                className="img-fluid animated bounceInRight delay-3s "
+                alt="escucha-activa.jpg"
+                className="img-fluid bordeImagen animated  "
               />
             </Col>
-           
           </Row>
         </CardBody>
       </div>
