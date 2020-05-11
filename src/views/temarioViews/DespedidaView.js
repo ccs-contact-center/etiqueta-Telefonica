@@ -15,12 +15,13 @@ class PresentacionView extends Component {
         </CardHeader>
         <CardBody className="">
           <Row>
-            <Col xs="12">
-              <h2>
+            <Col xs="12" className="centrado-fila">
+            <h2>
                 <b>¡Gracias!</b>
               </h2>
             </Col>
             <Col xs="12" className="centrado-fila">
+             
               <div style={{ width: '400px' }} className="cajaA1 bg-fondo-btn3">
                 <p className="text-justify">
                   Has completado el curso de habilidades operativas y te damos
