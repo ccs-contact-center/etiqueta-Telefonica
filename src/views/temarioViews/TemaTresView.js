@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Card, CardBody, CardHeader, Col, Row, Button } from 'reactstrap'
+import {  CardBody, CardHeader, Col, Row,  } from 'reactstrap'
 import AscuchaActiva from '../../assets/img/ImgEtiquetaTelefonica/escucha-activa.jpg'
 class TemaDosView extends Component {
   loading = () => (
@@ -19,12 +19,9 @@ class TemaDosView extends Component {
                 style={{ marginBottom: '0px' }}
                 className="text-center animated "
               >
-               <b> Ahora, Elaboremos:</b>
+                <b> Ahora, Elaboremos:</b>
               </p>
-              <ul
-               
-                className="animated"
-              >
+              <ul className="animated">
                 <li className="ulImg">Estructura básica de llamada.</li>
                 <li className="ulImg">Habilidades necesarias.</li>
                 <li className="ulImg">Habilidades técnicas.</li>
