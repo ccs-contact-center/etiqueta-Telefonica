@@ -25,7 +25,7 @@ class BienvenidaView extends Component {
                 className="img-fluid animated  bounceInRight delay-1s"
               />
              <div className="animated  bounceInLeft delay-1s">
-             <h1>Habilidades Operativa</h1>
+             <h1>Habilidades Operativas</h1>
               <h2>ETIQUETA TELEFONICA </h2>
              </div>
             </Col>
