@@ -15,58 +15,34 @@ class TemaDosView extends Component {
         </CardHeader>
         <CardBody className="">
           <Row className="centrado-fila">
-            <Col md="1" sm="2" className="centrado-fila ">
-              <p
+            <Col md="12" className="">
+              <h2
                 style={{ marginBottom: '0px' }}
-                className="animated rotateInDownRight delay-1s"
+                className="text-center mb-3 animated "
               >
                 <b>¿Porqué es importante la Etiqueta Telefónica?</b>
+              </h2>
+            </Col>
+            
+            <Col md="9" sm="8" className="">
+              <p
+                style={{ marginBottom: '0px' }}
+                className="text-justify"
+              >
+                Porque esto creará un servicio de atención al cliente homogéneo
+                sin importar el día y la hora en la que se comunique el cliente.
+                Tener una buena etiqueta telefónica puede ser la diferencia
+                entre un cliente satisfecho y uno que decida buscar a la
+                competencia.
               </p>
+            </Col>
+            <Col md="3" sm="4" className="centrado-fila ">
               <img
                 src={icono}
-                style={{ width: 60 }}
+                style={{ width: 260 }}
                 alt="icono.png"
-                className="img-fluid  animated rollIn delay-0s"
+                className="img-fluid  "
               />
-            </Col>
-            <Col md="10" sm="10" className="">
-              <p
-                style={{ marginBottom: '0px' }}
-                className="animated rotateInDownRight delay-1s"
-              >
-                Crear un ambiente agradable para el usuario, dejando una buena
-                imagen de la empresa.
-              </p>
-              <br />
-              <p
-                style={{ marginBottom: '0px' }}
-                className="animated rotateInDownRight delay-2s"
-              >
-                <b>Responsabilidad</b>.
-              </p>
-              <p
-                style={{ marginBottom: '0px' }}
-                className="animated rotateInDownRight delay-2s"
-              >
-                Seguir los procedimientos del servicio. Garantizar que le
-                cliente quede satisfecho.
-              </p>
-              <br />
-              <p
-                style={{ marginBottom: '0px' }}
-                className="animated rotateInDownRight delay-3s"
-              >
-                <b>Herramientas de apoyo.</b>
-              </p>
-
-              <p
-                style={{ marginBottom: '0px' }}
-                className="animated rotateInDownRight delay-3s"
-              >
-                (Jefe de Operación, Supervisores, Capacitación, Calidad ),
-                tienen como misión, informar , formar y dar apoyo al agente,
-                para alcanzar sus objetivos.
-              </p>
             </Col>
           </Row>
         </CardBody>
