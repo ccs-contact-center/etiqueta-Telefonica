@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { CardBody, CardHeader, Col, Row } from 'reactstrap'
 import Flecha from '../../assets/img/ImgEtiquetaTelefonica/flecha.png'
+import Video3 from '../../assets/img/ImgEtiquetaTelefonica/tonodevoz.MP4'
+import ReactPlayer from 'react-player'
 
 class TemaSeisView extends Component {
   loading = () => (
@@ -60,9 +62,8 @@ class TemaSeisView extends Component {
                 </p>
               </div>
             </Col>
-            <Col xs="12">
-              <br />
-              <p>video</p>
+            <Col xs="12" className="mt-3">
+              <ReactPlayer width="90%" url={Video3} controls />
             </Col>
           </Row>
         </CardBody>
