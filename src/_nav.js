@@ -41,5 +41,9 @@ export default {
       icon: 'icon-puzzle',
     
     },
+    {
+      name: 'DESPEDIDA',
+      icon: 'icon-tag',
+    },
   ],
 }
