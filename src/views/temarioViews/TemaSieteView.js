@@ -17,14 +17,14 @@ class TemaSeisView extends Component {
         </CardHeader>
         <CardBody className="">
           <Row className="centrado-fila">
-            <Col xs="12">
+            <Col xs="12" className="animated bounceInLeft">
               <h2>
                 <b>HABILIDADES NECESARIAS</b>
               </h2>
               <p className="text-center">Evita:</p>
             </Col>
             <Col xs="12" sm="12" md="6" className="mt-4 mb-4">
-              <div className="cajaA1">
+              <div className="cajaA1 animated bounceInLeft delay-1s">
                 <ul style={{ marginBottom: '0px' }}>
                   <li>
                     <b className="text-danger">Errores gramaticales como:</b>
@@ -60,7 +60,7 @@ class TemaSeisView extends Component {
               </div>
             </Col>
             <Col xs="12" sm="12" md="6" className="centrado-fila">
-              <ReactPlayer width="100%" url={Video1} controls />
+              <ReactPlayer className="animated bounceInRight delay-2s" width="100%" url={Video1} controls />
             </Col>
           </Row>
         </CardBody>
