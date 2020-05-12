@@ -18,11 +18,11 @@ class TemaSeisView extends Component {
         <CardBody className="">
           <Row className="centrado-fila">
             <Col xs="12">
-              <h2>
+              <h2 className="animated flipInX">
                 <b>HABILIDADES NECESARIAS</b>
               </h2>
             </Col>
-            <Col xs="12">
+            <Col xs="12" className="animated jackInTheBox delay-1s">
               <p>
                 Algunas frases que puedes ocupar para empatizar y conectar con
                 el cliente pueden ser:
