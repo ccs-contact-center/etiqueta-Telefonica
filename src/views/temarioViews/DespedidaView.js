@@ -16,14 +16,14 @@ class PresentacionView extends Component {
         <CardBody className="">
           <Row>
             <Col xs="12" className="centrado-fila">
-            <h2>
+            <h2 className="animated headShake infinite delay-0s">
                 <b>¡Gracias!</b>
               </h2>
             </Col>
             <Col xs="12" className="centrado-fila">
              
               <div style={{ width: '400px' }} className="cajaA1 bg-fondo-btn3">
-                <p className="text-justify">
+                <p className="text-justify animated  fadeInDown  delay-2s ">
                   Has completado el curso de habilidades operativas y te damos
                   las gracias por el tiempo invertido en la mejora continua de
                   tu función dentro de CCS. Te recomendamos aplicar lo que vimos
