@@ -172,7 +172,7 @@ class Login extends Component {
                       
                     }}
                   >
-                    <h4>Habilidades Operativa</h4>
+                    <h4>Habilidades Operativas</h4>
                   </div>
                 </Card>
               </CardGroup>
