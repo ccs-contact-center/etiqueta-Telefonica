@@ -1,38 +1,49 @@
 import React, { Component } from 'react'
 import { ReactSortable } from 'react-sortablejs'
 import Nota from './notasReferencia'
+import { Row, Col } from 'reactstrap'
+import tabla01 from '../../../assets/img/ImgEtiquetaTelefonica/tabla01.jpg'
 
 class Actividad1 extends Component {
   constructor(props) {
     super(props)
     this.state = {
       list: [
-        { id: '1', name: 'DESCRIPCIÓN' },
         {
-          id: '6 ',
-          name:
-            '	Se realiza sondeo sobre las respuestas brindadas en la encuesta (proporcionado por Altán Redes) para la correcta continuidad del proceso. ',
+          id: '1',
+          name: 'A',
         },
-        { id: '2', name: '	SALUDO' },
         {
-          id: '8 ',
-          name:
-            '	Le atendió (Nombre y Apellido) de ALTÁN REDES; Que tenga un excelente día /tarde/noche.',
+          id: '2',
+          name: 'B',
         },
-        { id: '3', name: '	Lineamientos' },
         {
-          id: '7 ',
-          name:
-            '	Agradezco su tiempo y le comento que se dará seguimiento a las observaciones indicadas durante la llamada (indicando los puntos que tendrán seguimiento).',
+          id: '3',
+          name: 'C',
         },
-        { id: '4 ', name: '	AYUDA ADICIONAL/ DESPEDIDA ' },
         {
-          id: '5 ',
-          name:
-            '	Buenos (días, tardes, noches) mi nombre es__________________ le llamo de Altán Redes el motivo de esta llamada, es para dar continuidad a la encuesta que fue realizada con usted hace unas semanas donde comentó que (se informa sobre los resultados obtenidos en la encuesta que le realizaron), por lo que el objetivo es dar seguimiento y entender de manera precisa algunos puntos específicos: ',
+          id: '4',
+          name: 'D',
         },
       ],
-      list2: [],
+      list2: [
+        {
+          id: '5',
+          name: '	A',
+        },
+        {
+          id: '6',
+          name: 'B',
+        },
+        {
+          id: '7',
+          name: '	C',
+        },
+        {
+          id: '8 ',
+          name: '	D',
+        },
+      ],
       list3: [],
       list4: [],
       list5: [],
@@ -40,186 +51,305 @@ class Actividad1 extends Component {
       list7: [],
       list8: [],
       list9: [],
+      list10: [],
     }
   }
 
   render() {
     return (
-      <div className="row align-items-start centrado-fila ">
-        <div className="col ">
+      <Row className="  centrado-fila ">
+        <Col xs="7">
           <div className="card bg-fondo-btn2">
             <h6 className="text-center text-white mt-2">Terminos</h6>
+            <div className="centrado-fila bgImgTabla">
+              <div>
+                <ReactSortable
+                  list={this.state.list}
+                  setList={(newState) => this.setState({ list: newState })}
+                  group="shared-group-name"
+                  style={{cursor:'pointer'}}
+                >
+                  {this.state.list.map((item) => (
+                    <div key={item.id}>
+                      <div className="card  m-3 cursor-draggable text-center">
+                        <div className="text-dark">{item.name}</div>
+                      </div>
+                    </div>
+                  ))}
+                </ReactSortable>
+              </div>
+             
 
-            <ReactSortable
-              list={this.state.list}
-              setList={(newState) => this.setState({ list: newState })}
-              group="shared-group-name"
-            >
-              {this.state.list.map((item) => (
-                <div key={item.id}>
-                  <div className="card  m-3 cursor-draggable text-center">
-                    <div className="text-dark">{item.name}</div>
-                  </div>
-                </div>
-              ))}
-            </ReactSortable>
+              <div>
+                <ReactSortable
+                  list={this.state.list2}
+                  setList={(newState) => this.setState({ list2: newState })}
+                  group="shared-group-name"
+                  style={{cursor:'pointer'}}
+                >
+                  {this.state.list2.map((item) => (
+                    <div key={item.id}>
+                      <div className="card  m-3 cursor-draggable text-center">
+                        <div className="text-dark">{item.name}</div>
+                      </div>
+                    </div>
+                  ))}
+                </ReactSortable>
+              </div>
+            </div>
           </div>
-        </div>
+        </Col>
 
-        <div className="col">
-          <div className="card  bg-fondo-btn2 pl-4 pr-4">
-            <h6 className="text-center text-white mt-2">¡Arrastra aqui!</h6>
-                 
-            <table className="table table-bordered" >
-              <tbody>
-                <tr>
-                  <th rowspan="5" className="align-middle text-danger">
-                    <ReactSortable
-                      list={this.state.list9}
-                      setList={(newState) => this.setState({ list9: newState })}
-                      group="shared-group-name"
-                    >
-                      {this.state.list9.map((item) => (
-                        <div key={item.id}>
-                          <div className=" cursor-draggable text-center  ">
-                            {item.name}
-                          </div>
-                        </div>
-                      ))}
-                    </ReactSortable>
-                  </th>
-                  <th className="bg-danger text-white">RUBRO</th>
-                  <th className="bg-danger text-white">SCRIPT</th>
-                </tr>
-                <tr>
-                  <th className="align-middle ">
-                    <ReactSortable
-                      list={this.state.list2}
-                      setList={(newState) => this.setState({ list2: newState })}
-                      group="shared-group-name"
-                    >
-                      {this.state.list2.map((item) => (
-                        <div key={item.id}>
-                          <div className=" cursor-draggable text-center text-white">
-                            {item.name}
-                          </div>
-                        </div>
-                      ))}
-                    </ReactSortable>
-                  </th>
-                  <td>
-                    <ReactSortable
-                      list={this.state.list3}
-                      setList={(newState) => this.setState({ list3: newState })}
-                      group="shared-group-name"
-                    >
-                      {this.state.list3.map((item) => (
-                        <div key={item.id}>
-                          <div className=" cursor-draggable text-center text-white">
-                            {item.name}
-                          </div>
-                        </div>
-                      ))}
-                    </ReactSortable>
-                  </td>
-                </tr>
-                <tr>
-                  <th className="align-middle ">
-                    <ReactSortable
-                      list={this.state.list4}
-                      setList={(newState) => this.setState({ list4: newState })}
-                      group="shared-group-name"
-                    >
-                      {this.state.list4.map((item) => (
-                        <div key={item.id}>
-                          <div className=" cursor-draggable text-center text-white">
-                            {item.name}
-                          </div>
-                        </div>
-                      ))}
-                    </ReactSortable>
-                  </th>
-                  <td>
-                    <ReactSortable
-                      list={this.state.list5}
-                      setList={(newState) => this.setState({ list5: newState })}
-                      group="shared-group-name"
-                    >
-                      {this.state.list5.map((item) => (
-                        <div key={item.id}>
-                          <div className=" cursor-draggable text-center text-white">
-                            {item.name}
-                          </div>
-                        </div>
-                      ))}
-                    </ReactSortable>
-                  </td>
-                </tr>
-                <tr>
-                  <th className="align-middle " rowspan="2">
-                    <ReactSortable
-                      list={this.state.list6}
-                      setList={(newState) => this.setState({ list6: newState })}
-                      group="shared-group-name"
-                    >
-                      {this.state.list6.map((item) => (
-                        <div key={item.id}>
-                          <div className=" cursor-draggable text-center text-white">
-                            {item.name}
-                          </div>
-                        </div>
-                      ))}
-                    </ReactSortable>
-                  </th>
-                  <td>
-                    <ReactSortable
-                      list={this.state.list7}
-                      setList={(newState) => this.setState({ list7: newState })}
-                      group="shared-group-name"
-                    >
-                      {this.state.list7.map((item) => (
-                        <div key={item.id}>
-                          <div className=" cursor-draggable text-center text-white">
-                            {item.name}
-                          </div>
-                        </div>
-                      ))}
-                    </ReactSortable>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <ReactSortable
-                      list={this.state.list8}
-                      setList={(newState) => this.setState({ list8: newState })}
-                      group="shared-group-name"
-                    >
-                      {this.state.list8.map((item) => (
-                        <div key={item.id}>
-                          <div className=" cursor-draggable text-center text-white">
-                            {item.name}
-                          </div>
-                        </div>
-                      ))}
-                    </ReactSortable>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+        <Col xs="5">
+          <div className="card   pl-4 pr-4">
+            <h6 className=" mt-2">¡Arrastra aqui!</h6>
+
+            <Row className="centrado-fila pl-2 pr-2 bg-fondo-btn2 rounded mb-3">
+              <Col
+                xs="2"
+                className="border border-white "
+                style={{ padding: '10px' }}
+              >
+                <ReactSortable
+                  list={this.state.list3}
+                  setList={(newState) => this.setState({ list3: newState })}
+                  group="shared-group-name"
+                  
+                >
+                  {this.state.list3.map((item) => (
+                    <div key={item.id}>
+                      <div
+                        className="card cursor-draggable text-center "
+                        style={{ marginBottom: '0px' }}
+                      >
+                        <div className="text-dark">{item.name}</div>
+                      </div>
+                    </div>
+                  ))}
+                </ReactSortable>
+              </Col>
+              <Col xs="10">
+                <p style={{ marginBottom: '0px' }}>
+                  ¡Necesito que me resuelvas porque tengo mucho tiempo ya en
+                  línea!
+                </p>
+              </Col>
+            </Row>
+            <Row className="centrado-fila pl-2 pr-2 bg-fondo-btn2 rounded mb-3">
+              <Col
+                xs="2"
+                className="border border-white"
+                style={{ padding: '10px' }}
+              >
+                <ReactSortable
+                  list={this.state.list4}
+                  setList={(newState) => this.setState({ list4: newState })}
+                  group="shared-group-name"
+                >
+                  {this.state.list4.map((item) => (
+                    <div key={item.id}>
+                      <div
+                        className="card cursor-draggable text-center"
+                        style={{ marginBottom: '0px' }}
+                      >
+                        <div className="text-dark">{item.name}</div>
+                      </div>
+                    </div>
+                  ))}
+                </ReactSortable>
+              </Col>
+              <Col xs="10">
+                <p style={{ marginBottom: '0px' }}>
+                  ¿Me estás diciendo que debo pagar más por el servicio?
+                </p>
+              </Col>
+            </Row>
+            <Row className="centrado-fila pl-2 pr-2 bg-fondo-btn2 rounded mb-3">
+              <Col
+                xs="2"
+                className="border border-white"
+                style={{ padding: '10px' }}
+              >
+                <ReactSortable
+                  list={this.state.list5}
+                  setList={(newState) => this.setState({ list5: newState })}
+                  group="shared-group-name"
+                >
+                  {this.state.list5.map((item) => (
+                    <div key={item.id}>
+                      <div
+                        className="card cursor-draggable text-center"
+                        style={{ marginBottom: '0px' }}
+                      >
+                        <div className="text-dark">{item.name}</div>
+                      </div>
+                    </div>
+                  ))}
+                </ReactSortable>
+              </Col>
+              <Col xs="10">
+                <p style={{ marginBottom: '0px' }}>
+                  He repetido mil veces mi situación, ¿tu sí me ayudaras?
+                </p>
+              </Col>
+            </Row>
+            <Row className="centrado-fila pl-2 pr-2 bg-fondo-btn2 rounded mb-3">
+              <Col
+                xs="2"
+                className="border border-white"
+                style={{ padding: '10px' }}
+              >
+                <ReactSortable
+                  list={this.state.list6}
+                  setList={(newState) => this.setState({ list6: newState })}
+                  group="shared-group-name"
+                >
+                  {this.state.list6.map((item) => (
+                    <div key={item.id}>
+                      <div
+                        className="card cursor-draggable text-center"
+                        style={{ marginBottom: '0px' }}
+                      >
+                        <div className="text-dark">{item.name}</div>
+                      </div>
+                    </div>
+                  ))}
+                </ReactSortable>
+              </Col>
+              <Col xs="10">
+                <p style={{ marginBottom: '0px' }}>
+                  Quiero que me digas cuanto debo de mi servicio
+                </p>
+              </Col>
+            </Row>
+            <Row className="centrado-fila pl-2 pr-2 bg-fondo-btn2 rounded mb-3">
+              <Col
+                xs="2"
+                className="border border-white"
+                style={{ padding: '10px' }}
+              >
+                <ReactSortable
+                  list={this.state.list7}
+                  setList={(newState) => this.setState({ list7: newState })}
+                  group="shared-group-name"
+                >
+                  {this.state.list7.map((item) => (
+                    <div key={item.id}>
+                      <div
+                        className="card cursor-draggable text-center"
+                        style={{ marginBottom: '0px' }}
+                      >
+                        <div className="text-dark">{item.name}</div>
+                      </div>
+                    </div>
+                  ))}
+                </ReactSortable>
+              </Col>
+              <Col xs="10">
+                <p style={{ marginBottom: '0px' }}>
+                  Creo que no es necesario tantos datos que te estoy dando.
+                </p>
+              </Col>
+            </Row>
+            <Row className="centrado-fila pl-2 pr-2 bg-fondo-btn2 rounded mb-3">
+              <Col
+                xs="2"
+                className="border border-white"
+                style={{ padding: '10px' }}
+              >
+                <ReactSortable
+                  list={this.state.list8}
+                  setList={(newState) => this.setState({ list8: newState })}
+                  group="shared-group-name"
+                >
+                  {this.state.list8.map((item) => (
+                    <div key={item.id}>
+                      <div
+                        className="card cursor-draggable text-center"
+                        style={{ marginBottom: '0px' }}
+                      >
+                        <div className="text-dark">{item.name}</div>
+                      </div>
+                    </div>
+                  ))}
+                </ReactSortable>
+              </Col>
+              <Col xs="10">
+                <p style={{ marginBottom: '0px' }}>
+                  Muchas gracias por la información que me diste.
+                </p>
+              </Col>
+            </Row>
+            <Row className="centrado-fila pl-2 pr-2 bg-fondo-btn2 rounded mb-3">
+              <Col
+                xs="2"
+                className="border border-white"
+                style={{ padding: '10px' }}
+              >
+                <ReactSortable
+                  list={this.state.list9}
+                  setList={(newState) => this.setState({ list9: newState })}
+                  group="shared-group-name"
+                >
+                  {this.state.list9.map((item) => (
+                    <div key={item.id}>
+                      <div
+                        className="card cursor-draggable text-center"
+                        style={{ marginBottom: '0px' }}
+                      >
+                        <div className="text-dark">{item.name}</div>
+                      </div>
+                    </div>
+                  ))}
+                </ReactSortable>
+              </Col>
+              <Col xs="10">
+                <p style={{ marginBottom: '0px' }}>¿De donde me llamas?</p>
+              </Col>
+            </Row>
+            <Row className="centrado-fila pl-2 pr-2 bg-fondo-btn2 rounded mb-3">
+              <Col
+                xs="2"
+                className="border border-white"
+                style={{ padding: '10px' }}
+              >
+                <ReactSortable
+                  list={this.state.list10}
+                  setList={(newState) => this.setState({ list10: newState })}
+                  group="shared-group-name"
+                >
+                  {this.state.list10.map((item) => (
+                    <div key={item.id}>
+                      <div
+                        className="card cursor-draggable text-center"
+                        style={{ marginBottom: '0px' }}
+                      >
+                        <div className="text-dark">{item.name}</div>
+                      </div>
+                    </div>
+                  ))}
+                </ReactSortable>
+              </Col>
+              <Col xs="10">
+                <p style={{ marginBottom: '0px' }}>
+                  Desde antes que nacieras tengo este problema, pásame con tu
+                  supervisor!!
+                </p>
+              </Col>
+            </Row>
           </div>
-        </div>
+        </Col>
 
-        <div className="col-12 mt-3 ">
-          <button className="btn btn-primary" 
-          >Enviar</button>
-        </div>
-        <div className="col-12 mt-3 ">
+        <Col xs="12" className=" mt-3  centrado-fila">
+          <button className="btn btn-primary">Enviar</button>
+        </Col>
+        <Col xs="12" className=" mt-3 centrado-fila ">
           <Nota
             title1="Instrucción:"
             content1="Arrastre los las Definiciones correctas a la tabla."
           />
-        </div>
-      </div>
+        </Col>
+      </Row>
     )
   }
 }
