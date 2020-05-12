@@ -15,13 +15,13 @@ class TemaSeisView extends Component {
         </CardHeader>
         <CardBody className="">
           <Row className="centrado-fila">
-            <Col xs="12">
+            <Col xs="12" className="animated zoomIn">
               <h2>
                 <b>HABILIDADES TÉCNICAS</b>
               </h2>
             </Col>
             <Col xs="12">
-              <p>
+              <p className=" animated zoomIn delay-1s">
                 La Comunicación es la transmisión de un mensaje de un emisor a
                 un receptor mediante la utilización de un codigo conocido por
                 ambos y con un objetivo determinado.
@@ -34,10 +34,10 @@ class TemaSeisView extends Component {
                 src={Elemetos}
                 style={{ width: 260 }}
                 alt="icono.png"
-                className="img-fluid  "
+                className="img-fluid animated zoomIn delay-2s "
               />
             </Col>
-            <Col xs="12" sm="8" md="9">
+            <Col xs="12" sm="8" md="9" className="animated zoomIn delay-3s">
               <p>
                 <b>La voz:</b> elemento fundamental de la comunicación
                 telefónica
