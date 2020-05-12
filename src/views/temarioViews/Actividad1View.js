@@ -11,13 +11,17 @@ class ActividadView extends Component {
   render() {
     return (
       <div className="animated fadeIn">
-       
         <Row>
           <Col>
             <CardHeader className="">
-              <h2> Test de autoevaluación</h2>
+              <h2>Evaluación: </h2>
             </CardHeader>
             <CardBody className="">
+              <p>
+                Empecemos a evaluarnos para saber si vas entendiendo el tema.<br/>
+                Relaciona las frases que ocuparías VS las expresiones del
+                cliente al teléfono.{' '}
+              </p>
               <Actividad1 />
             </CardBody>
           </Col>
