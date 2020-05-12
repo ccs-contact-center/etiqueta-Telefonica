@@ -82,7 +82,7 @@ class Inicio extends Component {
           ) : null}
           <br />
           <CardFooter>
-            <Navegador handleNavigation={this.setIndex} maxIndex={14} />
+            <Navegador handleNavigation={this.setIndex} maxIndex={15} />
           </CardFooter>
         </Card>
       </div>
