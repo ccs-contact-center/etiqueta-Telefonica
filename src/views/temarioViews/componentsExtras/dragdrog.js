@@ -62,15 +62,15 @@ class Actividad1 extends Component {
           <div className="card bg-fondo-btn2">
             <h6 className="text-center text-white mt-2">Terminos</h6>
             <div className="centrado-fila bgImgTabla">
-              <div>
+              <div style={{paddingTop:'90px'}}>
                 <ReactSortable
                   list={this.state.list}
                   setList={(newState) => this.setState({ list: newState })}
                   group="shared-group-name"
-                  style={{cursor:'pointer'}}
+                  style={{ cursor: 'pointer' }}
                 >
                   {this.state.list.map((item) => (
-                    <div key={item.id}>
+                    <div key={item.id} style={{marginBottom:'60px'}}>
                       <div className="card  m-3 cursor-draggable text-center">
                         <div className="text-dark">{item.name}</div>
                       </div>
@@ -78,17 +78,24 @@ class Actividad1 extends Component {
                   ))}
                 </ReactSortable>
               </div>
-             
-
               <div>
+                <img
+                  src={tabla01}
+                  style={{ width: 490 }}
+                  alt="tabla01.png"
+                  className="img-fluid  "
+                />
+              </div>
+
+              <div style={{paddingTop:'90px'}}>
                 <ReactSortable
                   list={this.state.list2}
                   setList={(newState) => this.setState({ list2: newState })}
                   group="shared-group-name"
-                  style={{cursor:'pointer'}}
+                  style={{ cursor: 'pointer' }}
                 >
                   {this.state.list2.map((item) => (
-                    <div key={item.id}>
+                    <div key={item.id}  style={{marginBottom:'60px'}}>
                       <div className="card  m-3 cursor-draggable text-center">
                         <div className="text-dark">{item.name}</div>
                       </div>
@@ -114,7 +121,6 @@ class Actividad1 extends Component {
                   list={this.state.list3}
                   setList={(newState) => this.setState({ list3: newState })}
                   group="shared-group-name"
-                  
                 >
                   {this.state.list3.map((item) => (
                     <div key={item.id}>
@@ -346,7 +352,7 @@ class Actividad1 extends Component {
         <Col xs="12" className=" mt-3 centrado-fila ">
           <Nota
             title1="Instrucción:"
-            content1="Arrastre los las Definiciones correctas a la tabla."
+            content1="Arrastre los las Letras correctas al recuadro."
           />
         </Col>
       </Row>
