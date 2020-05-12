@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { CardBody, CardHeader, Col, Row } from 'reactstrap'
 
-import Habilidades from '../../assets/img/ImgEtiquetaTelefonica/HABILIDADES.png'
+import Video2 from '../../assets/img/ImgEtiquetaTelefonica/etiqueta.MP4'
 import ReactPlayer from 'react-player'
 
 class TemaSeisView extends Component {
@@ -55,8 +55,8 @@ class TemaSeisView extends Component {
             <Col xs="12" sm="12" md="6" className="centrado-fila">
               <ReactPlayer
                 width="90%"
-                url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-                playing
+                url={Video2}
+                controls
               />
             </Col>
           </Row>
