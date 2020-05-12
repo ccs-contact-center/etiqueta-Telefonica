@@ -21,7 +21,7 @@ import Actividad1View from './temarioViews/Actividad1View'
 import TemaDiezView from './temarioViews/TemaDiezView'
 import TemaOnceView from './temarioViews/TemaOnceView'
 import DespedidaView from './temarioViews/DespedidaView'
-import ActividadView from './temarioViews/ActividadView'
+import Actividad2View from './temarioViews/Actividad2View'
 
 //import RecapitulacionView from './temarioViews/RecapitulacionView'
 
@@ -47,8 +47,8 @@ class Inicio extends Component {
       <div className="animated fadeIn">
         <Card>
           {this.state.index === 0 ? (
-            //<TemaOnceView/>
-            <BienvenidaView />
+            <Actividad1View/>
+            //<BienvenidaView />
           ) : this.state.index === 1 ? (
             <ObjetivoView />
           ) : this.state.index === 2 ? (
@@ -78,7 +78,7 @@ class Inicio extends Component {
           ) : this.state.index === 14 ? (
             <DespedidaView />
           ) : this.state.index === 15 ? (
-            <ActividadView />
+            <Actividad2View />
           ) : null}
           <br />
           <CardFooter>
