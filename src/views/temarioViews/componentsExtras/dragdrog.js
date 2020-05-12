@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { ReactSortable } from 'react-sortablejs'
 import Nota from './notasReferencia'
 
-class List2 extends Component {
+class Actividad1 extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -224,4 +224,4 @@ class List2 extends Component {
   }
 }
 
-export default List2
+export default Actividad1
