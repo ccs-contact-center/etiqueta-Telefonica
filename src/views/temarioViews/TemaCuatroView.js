@@ -17,15 +17,15 @@ class TemaDosView extends Component {
         <CardBody className="">
           <Row>
             <Col xs="12">
-              <h2>
+              <h2 className="animated fadeInDown">
                 <b>ESTRUCTURA DE LLAMADA:</b>
               </h2>
-              <p>
+              <p className="animated fadeInDown">
                 Será esta estructura nuestra guía para darle un orden a nuestras
                 llamadas.
               </p>
             </Col>
-            <Col xs="12" className=" centrado-fila">
+            <Col xs="12" className=" centrado-fila animated fadeInDown">
               <div className="cajaA1 bg-fondo-btn3">
                 <p style={{ marginBottom: '0px' }} className="text-center">
                   <b> &nbsp; &nbsp; Inicio &nbsp; &nbsp; </b>
@@ -48,7 +48,7 @@ class TemaDosView extends Component {
                 </ul>
               </div>
             </Col>
-            <Col xs="12" className=" centrado-fila mt-3">
+            <Col xs="12" className=" centrado-fila animated fadeInDown mt-3">
               <div className="cajaA1 bg-fondo-btn3">
                 <p style={{ marginBottom: '0px' }} className="text-center">
                   <b>Desarrollo</b>
@@ -69,7 +69,7 @@ class TemaDosView extends Component {
                 </ul>
               </div>
             </Col>
-            <Col xs="12" className=" centrado-fila mt-3">
+            <Col xs="12" className=" centrado-fila mt-3 animated fadeInDown">
               <div className="cajaA1 bg-fondo-btn3">
                 <p style={{ marginBottom: '0px' }} className="text-center">
                   <b>&nbsp; &nbsp; Cierre &nbsp; &nbsp; </b>
