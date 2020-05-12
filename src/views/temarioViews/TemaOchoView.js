@@ -17,13 +17,13 @@ class TemaSeisView extends Component {
         </CardHeader>
         <CardBody className="">
           <Row className="centrado-fila">
-            <Col xs="12">
+            <Col xs="12" className="animated bounceInUp">
               <h2>
                 <b>HABILIDADES NECESARIAS</b>
               </h2>
             </Col>
             <Col xs="12" sm="12" md="6" className="mt-4 mb-4">
-              <div className="cajaA1">
+              <div className="cajaA1 animated bounceInRight">
                 <ul style={{ marginBottom: '0px' }}>
                   <li className="ulImg">
                     Mantener y trasmitir una
@@ -54,6 +54,7 @@ class TemaSeisView extends Component {
             </Col>
             <Col xs="12" sm="12" md="6" className="centrado-fila">
               <ReactPlayer
+              className="animated bounceInLeft"
                 width="90%"
                 url={Video2}
                 controls
