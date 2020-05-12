@@ -17,12 +17,12 @@ class TemaSeisView extends Component {
         <CardBody className="">
           <Row className="centrado-fila">
             <Col xs="12" >
-            <h2>
+            <h2 className="animated bounceInDown">
                 <b>HABILIDADES NECESARIAS</b>
               </h2>
-              <p className="text-center">No olvides que durante tu llamada debemos:</p>
+              <p className="text-center animated bounceInDown delay-0s">No olvides que durante tu llamada debemos:</p>
             </Col>
-            <Col xs="10" className="centrado-fila">
+            <Col xs="10" className="centrado-fila animated bounceInDown delay-1s">
               <div style={{ width: '200px' }} className="borderCaja">
                 <p className="">
                   <b className="text-danger">Personalizar.</b>
@@ -34,7 +34,7 @@ class TemaSeisView extends Component {
                 </p>
               </div>
             </Col>
-            <Col xs="10" className="mt-3">
+            <Col xs="10" className="mt-3 animated bounceInDown delay-2s">
               <div style={{ width: '200px' }} className="borderCaja">
                 <p className="">
                   <b className="text-danger">Evita frases negativas.</b>
@@ -47,7 +47,7 @@ class TemaSeisView extends Component {
               </div>
             </Col>
           </Row>
-          <Row className="centrado-fila mt-3">
+          <Row className="centrado-fila mt-3 animated bounceInDown delay-3s">
             <Col xs="6" sm="4" md="4" className="centrado-fila">
               <div
                 style={{ width: '200px' }}
