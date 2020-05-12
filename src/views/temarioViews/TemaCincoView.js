@@ -16,14 +16,14 @@ class TemaDosView extends Component {
         <CardBody className="">
           <Row>
             <Col xs="12">
-              <h2>
+              <h2 className="animated jackInTheBox">
                 <b>ESTRUCTURA DE LLAMADA:</b>
               </h2>
-              <p className="centrado-fila">Siempre ocupa durante tu llamada:</p>
+              <p className="centrado-fila animated jackInTheBox">Siempre ocupa durante tu llamada:</p>
             </Col>
           </Row>
           <Row className="centrado-fila mt-4">
-            <Col xs="6" className="centrado-fila">
+            <Col xs="6" className="centrado-fila animated jackInTheBox delay-1s">
               <p className="text-center">
                 <b className="text-danger">Actitud amable</b>
                 <br />
@@ -34,7 +34,7 @@ class TemaDosView extends Component {
           </Row>
           <Row className="centrado-fila ">
             <Col xs="6"></Col>
-            <Col xs="6" className="centrado-fila">
+            <Col xs="6" className="centrado-fila animated jackInTheBox delay-2s">
               <p className="text-center">
                 <b className="text-danger">Empatía</b>
                 <br />
@@ -44,7 +44,7 @@ class TemaDosView extends Component {
             </Col>
           </Row>
           <Row className="centrado-fila ">
-            <Col xs="6" className="centrado-fila">
+            <Col xs="6" className="centrado-fila animated jackInTheBox delay-3s">
               <p className="text-center">
                 <b className="text-danger">Escucha activa</b>
                 <br />
@@ -56,7 +56,7 @@ class TemaDosView extends Component {
           </Row>
           <Row className="centrado-fila ">
             <Col xs="6"></Col>
-            <Col xs="6" className="centrado-fila">
+            <Col xs="6" className="centrado-fila animated jackInTheBox delay-4s">
               <p className="text-center">
                 <b className="text-danger">Asertividad</b>
                 <br />
@@ -66,7 +66,7 @@ class TemaDosView extends Component {
             </Col>
           </Row>
           <Row className="centrado-fila ">
-            <Col xs="6" className="centrado-fila">
+            <Col xs="6" className="centrado-fila animated jackInTheBox delay-5s">
               <p className="text-center">
                 <b className="text-danger">Paráfrasis</b>
                 <br />
@@ -81,7 +81,7 @@ class TemaDosView extends Component {
                 src={Atencion}
                 style={{ width: 360 }}
                 alt="atencion-a-clientes-tn"
-                className="img-fluid bordeImagen  animated zoomInLeft delay-0s "
+                className="img-fluid bordeImagen  animated zoomInLeft delay-5s"
               />
             </Col>
           </Row>
