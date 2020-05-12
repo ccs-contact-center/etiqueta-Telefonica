@@ -28,7 +28,7 @@ class TemaUnoView extends Component {
               >
                 <b>¿Qué es la Etiqueta Telefónica?</b>
               </h2>
-              <p>
+              <p className="animated slideInUp">
                 Es un código de cortesía que se utiliza desde los inicios de los
                 call centers con el fin de ordenar el discurso de los agentes y
                 ofrecer a los clientes una atención{' '}
@@ -39,7 +39,7 @@ class TemaUnoView extends Component {
             <Col xs="12" className="text-center">
               <Row>
                 <Col xs="12" className="centrado-fila mb-4">
-                  <div className="cajaA2" style={{width:'80%'}}>
+                  <div className="cajaA2 animated slideInUp" style={{width:'80%'}}>
                     <div
                       className="bg-danger pl-3 pr-3"
                       style={{ marginTop: '-30px' }}
@@ -54,7 +54,7 @@ class TemaUnoView extends Component {
                   </div>
                 </Col>
                 <Col xs="12" className="centrado-fila mb-4">
-                  <div className="cajaA2" style={{width:'80%'}}>
+                  <div className="cajaA2 animated slideInUp" style={{width:'80%'}}>
                     <div
                       className="bg-danger pl-3 pr-3"
                       style={{ marginTop: '-30px' }}
@@ -69,7 +69,7 @@ class TemaUnoView extends Component {
                   </div>
                 </Col>
                 <Col xs="12" className="centrado-fila mb-4">
-                  <div className="cajaA2" style={{width:'80%'}}>
+                  <div className="cajaA2 animated slideInUp" style={{width:'80%'}}>
                     <div
                       className="bg-danger pl-3 pr-3"
                       style={{ marginTop: '-30px' }}
@@ -84,7 +84,7 @@ class TemaUnoView extends Component {
                   </div>
                 </Col>
                 <Col xs="12" className="centrado-fila mb-4">
-                  <div className="cajaA2" style={{width:'80%'}}>
+                  <div className="cajaA2 animated slideInUp" style={{width:'80%'}}>
                     <div
                       className="bg-danger pl-3 pr-3"
                       style={{ marginTop: '-30px' }}
@@ -102,7 +102,7 @@ class TemaUnoView extends Component {
             </Col>
             <Col xs="12 mt-3">
               <p
-                className="animated slideInUp text-center"
+                className="animated slideInUp  text-center"
                 style={{ marginBottom: '0px' }}
               >
                 Es la imagen de la empresa, asesor, producto y/o servicio.
