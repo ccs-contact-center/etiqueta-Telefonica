@@ -18,7 +18,7 @@ class TemaDosView extends Component {
             <Col md="12" className="">
               <h2
                 style={{ marginBottom: '0px' }}
-                className="text-center mb-3 animated "
+                className="text-center mb-3 animated bounceInRight delay-0s "
               >
                 <b>¿Porqué es importante la Etiqueta Telefónica?</b>
               </h2>
@@ -27,7 +27,7 @@ class TemaDosView extends Component {
             <Col md="9" sm="8" className="">
               <p
                 style={{ marginBottom: '0px' }}
-                className="text-justify"
+                className="text-justify animated bounceInRight delay-1s"
               >
                 Porque esto creará un servicio de atención al cliente homogéneo
                 sin importar el día y la hora en la que se comunique el cliente.
@@ -41,7 +41,7 @@ class TemaDosView extends Component {
                 src={icono}
                 style={{ width: 260 }}
                 alt="icono.png"
-                className="img-fluid  "
+                className="img-fluid animated bounceInRight delay-2s "
               />
             </Col>
           </Row>
