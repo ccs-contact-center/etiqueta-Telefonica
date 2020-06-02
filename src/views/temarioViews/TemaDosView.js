@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { CardBody, Col, Row, CardHeader, TabContent } from 'reactstrap'
+import { CardBody, Col, Row, CardHeader,  } from 'reactstrap'
 import icono from '../../assets/img/ImgEtiquetaTelefonica/icono.png'
 
 class TemaDosView extends Component {
