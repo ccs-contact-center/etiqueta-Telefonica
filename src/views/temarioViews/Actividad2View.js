@@ -9,7 +9,6 @@ import {
   FormGroup,
   Label,
   Input,
-  Table,
 } from 'reactstrap'
 import SweetAlert from 'sweetalert2-react'
 
