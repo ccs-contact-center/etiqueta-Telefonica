@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap'
+import { CardBody, CardHeader, Col, Row } from 'reactstrap'
 import actitudPositiva from '../../assets/img/ImgEtiquetaTelefonica/actitudPositiva.jpg'
 
 class TemaUnoView extends Component {
