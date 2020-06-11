@@ -12,6 +12,14 @@ import {
 } from 'reactstrap'
 import SweetAlert from 'sweetalert2-react'
 
+const validate = (values) => {
+  const errors = {}
+  console.log(values)
+  if (!values.pregunta1a) {
+    errors.pregunta = 'La pregunta 1  es obligatoria.'
+  }
+  return errors
+}
 class ActividadView extends Component {
   loading = () => (
     <div className="animated fadeIn pt-1 text-center">Cargando...</div>
@@ -23,6 +31,29 @@ class ActividadView extends Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+
+    this.state = {
+      errors: {
+        // pregunta1a : 'No esta seleccionado.'
+      },
+    }
+
+    this.handleChangeV = ({ target }) => {
+      const { name, value } = target
+      this.setState({ [name]: value })
+    }
+
+    this.handleSubmitV = (e) => {
+      e.preventDefault()
+      const { errors, ...sinErrors } = this.state
+      const result = validate(sinErrors)
+      console.log(Object.keys(result))
+
+      this.setState({ errors: result })
+      if (Object.keys(result).length) {
+        console.log('envio formulario')
+      }
+    }
   }
 
   handleChange(event) {
@@ -49,8 +80,21 @@ class ActividadView extends Component {
               <h2> Evaluación: </h2>
             </CardHeader>
             <CardBody className="">
-              <p>Es hora de saber qué has aprendido de este curso. Elige la opción de acuerdo a cada pregunta. </p>
-              <Form>
+              <p>
+                Es hora de saber qué has aprendido de este curso. Elige la
+                opción de acuerdo a cada pregunta.{' '}
+              </p>
+              <Form onSubmit={this.handleSubmitV}>
+                <FormGroup>
+                  <Label for="exampleEmail">pregunta</Label>
+                  <Input
+                    type="text"
+                    name="pregunta"
+                    id="pregunta"
+                    placeholder="with a placeholder"
+                  />
+                  {this.errors.pregunta && <p>{this.errors.pregunta}</p>}
+                </FormGroup>
                 <div className="cajaA2" style={{ backgroundColor: '#d5d4d8' }}>
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
@@ -59,15 +103,21 @@ class ActividadView extends Component {
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
-                        <Input type="radio" name="radio1" />
+                        <Input
+                          type="radio"
+                          name="pregunta1aa"
+                          id="pregunta1aa"
+                          onChange={this.handleChangeV}
+                        />
+
                         <Label check>(a) Es la estructura de la llamada.</Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio2" />
+                        <Input type="radio" name="pregunta1b" id="pregunta1b" />
                         <Label check>(b) Es la etiqueta telefónica. </Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio3" />
+                        <Input type="radio" name="pregunta1c" id="pregunta1c" />
                         <Label check>
                           (c) Es la manera de contestar el teléfono.
                         </Label>
@@ -87,21 +137,21 @@ class ActividadView extends Component {
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
-                        <Input type="radio" name="radio4" />
+                        <Input type="radio" name="pregunta2a" id="pregunta2a" />
                         <Label check>
                           (a) Puede ser la diferencia entre un cliente
                           satisfecho y uno que decida buscar a la competencia.
                         </Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio5" />
+                        <Input type="radio" name="pregunta2b" id="pregunta2b" />
                         <Label check>
                           (b) Se tendrá un mejor control de llamada y siempre
                           nos llamará.
                         </Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio6" />
+                        <Input type="radio" name="pregunta2c" id="pregunta2c" />
                         <Label check>
                           (c) Nos ayudará a tener en ocasiones homologado el
                           servicio al cliente.
@@ -122,15 +172,19 @@ class ActividadView extends Component {
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
-                        <Input type="radio" name="radio4" />
+                        <Input
+                          type="radio"
+                          name="pregunta23a"
+                          id="pregunta3a"
+                        />
                         <Label check>(a) Inicio, Desarrollo, Cierre.</Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio5" />
+                        <Input type="radio" name="pregunta3a" id="pregunta3b" />
                         <Label check>(b) Desarrollo, Inicio, Cierre. </Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio6" />
+                        <Input type="radio" name="pregunta3c" id="pregunta2c" />
                         <Label check>(c) Inicio, Cierre, Inicio.</Label>
                       </FormGroup>
                     </Col>
@@ -148,21 +202,21 @@ class ActividadView extends Component {
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
-                        <Input type="radio" name="radio4" />
+                        <Input type="radio" name="pregunta4a" id="pregunta4a" />
                         <Label check>
                           (a) Mencionar el nombre del cliente por lo menos 3
                           veces durante la llamada.
                         </Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio5" />
+                        <Input type="radio" name="pregunta4b" id="pregunta4b" />
                         <Label check>
                           (b) Mencionar el nombre del cliente por lo menos 2
                           veces durante la llamada.
                         </Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio6" />
+                        <Input type="radio" name="pregunta4c" id="pregunta4c" />
                         <Label check>
                           (c) Mencionar el nombre del cliente por lo menos 4
                           veces durante la llamada.
@@ -187,15 +241,15 @@ class ActividadView extends Component {
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
-                        <Input type="radio" name="radio4" />
+                        <Input type="radio" name="pregunta5a" id="pregunta5a" />
                         <Label check>(a) Gramaticales.</Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio5" />
+                        <Input type="radio" name="pregunta5b" id="pregunta5b" />
                         <Label check>(b) Muletillas.</Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio6" />
+                        <Input type="radio" name="pregunta5c" id="pregunta5c" />
                         <Label check>(c) Pleonasmos.</Label>
                       </FormGroup>
                     </Col>
@@ -217,19 +271,19 @@ class ActividadView extends Component {
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
-                        <Input type="radio" name="radio4" />
+                        <Input type="radio" name="pregunta6a" id="pregunta6a" />
                         <Label check>
                           (a) Colocarse en el lugar del cliente.
                         </Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio5" />
+                        <Input type="radio" name="pregunta6b" id="pregunta6b" />
                         <Label check>
                           (b) Resolver como de lugar el problema del cliente.
                         </Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio6" />
+                        <Input type="radio" name="pregunta6c" id="pregunta6c" />
                         <Label check>
                           (c) Es utilizar frases de cortesía con el cliente .
                         </Label>
@@ -249,15 +303,15 @@ class ActividadView extends Component {
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
-                        <Input type="radio" name="radio4" />
+                        <Input type="radio" name="pregunta7a" id="pregunta7a" />
                         <Label check>(a) Por Favor, Gracias.</Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio5" />
+                        <Input type="radio" name="pregunta7b" id="pregunta7b" />
                         <Label check>(b) De acuerdo, Entiendo.</Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio6" />
+                        <Input type="radio" name="pregunta7c" id="pregunta7c" />
                         <Label check>
                           (c) Me podría indicar, Me puede proporcionar por
                           favor.
@@ -273,22 +327,28 @@ class ActividadView extends Component {
                 >
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
-                      <b>8.	¿Por qué es importante la voz en tu trabajo?</b>{' '}
+                      <b>8. ¿Por qué es importante la voz en tu trabajo?</b>{' '}
                       <span style={{ color: 'red' }}>*</span>
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
-                        <Input type="radio" name="radio4" />
-                        <Label check>(a) Permite transmitir pensamientos,  emociones y sensaciones.</Label>
-                      </FormGroup>
-                      <FormGroup check>
-                        <Input type="radio" name="radio5" />
-                        <Label check>(b) Permite realizar el trabajo en menos tiempo.</Label>
-                      </FormGroup>
-                      <FormGroup check>
-                        <Input type="radio" name="radio6" />
+                        <Input type="radio" name="pregunta8a" id="pregunta8a" />
                         <Label check>
-                          (c) Así el cliente entiendo lo que le estamos solicitando.
+                          (a) Permite transmitir pensamientos, emociones y
+                          sensaciones.
+                        </Label>
+                      </FormGroup>
+                      <FormGroup check>
+                        <Input type="radio" name="pregunta8b" id="pregunta8b" />
+                        <Label check>
+                          (b) Permite realizar el trabajo en menos tiempo.
+                        </Label>
+                      </FormGroup>
+                      <FormGroup check>
+                        <Input type="radio" name="pregunta8c" id="pregunta8c" />
+                        <Label check>
+                          (c) Así el cliente entiendo lo que le estamos
+                          solicitando.
                         </Label>
                       </FormGroup>
                     </Col>
@@ -301,20 +361,25 @@ class ActividadView extends Component {
                 >
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
-                      <b>9.	¿Qué es la escucha activa?</b>{' '}
+                      <b>9. ¿Qué es la escucha activa?</b>{' '}
                       <span style={{ color: 'red' }}>*</span>
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
-                        <Input type="radio" name="radio4" />
-                        <Label check>(a) Atender y analizar cada palabra del usuario para poder ofrecer la mejor alternativa.</Label>
+                        <Input type="radio" name="pregunta9a" id="pregunta9a" />
+                        <Label check>
+                          (a) Atender y analizar cada palabra del usuario para
+                          poder ofrecer la mejor alternativa.
+                        </Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio5" />
-                        <Label check>(b) Poner en propias palabras la idea del cliente.</Label>
+                        <Input type="radio" name="pregunta9b" id="pregunta9b" />
+                        <Label check>
+                          (b) Poner en propias palabras la idea del cliente.
+                        </Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio6" />
+                        <Input type="radio" name="pregunta9c" id="pregunta9c" />
                         <Label check>
                           (c) Sonreír cuando se tome la llamada.
                         </Label>
@@ -338,15 +403,27 @@ class ActividadView extends Component {
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
-                        <Input type="radio" name="radio4" />
+                        <Input
+                          type="radio"
+                          name="pregunta10a"
+                          id="pregunta10a"
+                        />
                         <Label check>(a) Asertividad.</Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio5" />
+                        <Input
+                          type="radio"
+                          name="pregunta10b"
+                          id="pregunta10b"
+                        />
                         <Label check>(b) Escucha activa.</Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="radio6" />
+                        <Input
+                          type="radio"
+                          name="pregunta10c"
+                          id="pregunta10c"
+                        />
                         <Label check>(c) Empatía.</Label>
                       </FormGroup>
                     </Col>
@@ -356,7 +433,7 @@ class ActividadView extends Component {
                 <br />
 
                 <FormGroup check row>
-                  <Col className="centrado-fila"  >
+                  <Col className="centrado-fila">
                     <Button
                       color="primary"
                       onClick={() => this.setState({ show: true })}
