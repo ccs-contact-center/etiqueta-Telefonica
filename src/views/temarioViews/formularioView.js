@@ -10,7 +10,7 @@ import {
   Label,
   Input,
 } from 'reactstrap'
-import SweetAlert from 'sweetalert2-react'
+
 
 const validate = (values) => {
   const errors = {}
@@ -31,7 +31,7 @@ class FormularioView extends Component {
 
     this.state = {
       errors: {
-         pregunta1 : 'No esta seleccionado.'
+         //pregunta1 : 'No esta seleccionado.'
       },
     }
 
@@ -69,7 +69,7 @@ class FormularioView extends Component {
               <Form onSubmit={this.handleSubmit}>
                 <div className="cajaA2" style={{ backgroundColor: '#d5d4d8' }}>
                   <FormGroup>
-                    <Label for="pregunta1">pregunta</Label>
+                    <Label htmlFor="pregunta1">pregunta</Label>
                     <Input
                       type="text"
                       name="pregunta1"
