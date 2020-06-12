@@ -19,13 +19,14 @@ class Formulario2View extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      username: '',
-      name: '',
-      select: '',
       radio: '',
+      radio2: '',
+      radio3: '',
+      radio4: '',
+      radio5: '',
       textarea: '',
       acept: '',
-      message:'',
+      message: '',
     }
   }
 
@@ -50,12 +51,14 @@ class Formulario2View extends Component {
     })
   }
 
-  validate(e){
-    if (this.state.username || this.state.nombre || this.state.select  != true) {
+  validate(e) {
+    if (this.state.acept != true) {
       this.setState({
-        message:'Falta este campo'
+        message: 'Dé en  aceptar',
       })
     }
+   
+  
   }
 
   render() {
@@ -68,79 +71,348 @@ class Formulario2View extends Component {
             </CardHeader>
             <CardBody className="">
               <p>
-                Es hora de saber qué has aprendido de este curso. Elige la
-                opción de acuerdo a cada pregunta.{' '}
+                Partiendo de las siguientes afirmaciones usted evaluará su
+                experiencia mientras utilizaba los servicios de capa. Para eso sería necesario que respondiera a cada aseveración
+                utilizando una escala de 5 puntos, donde 5 es la mayor,
+                significando que usted está Totalmente de Acuerdo con la
+                expresión, 4- Algo de Acuerdo, 3- Ni de Acuerdo Ni en
+                desacuerdo, 2- Algo en Desacuerdo, y 1- Totalmente en
+                Desacuerdo.
               </p>
               <Form onSubmit={this.handleSubmit}>
                 <div className="cajaA2" style={{ backgroundColor: '#d5d4d8' }}>
-                  <FormGroup>
-                    <Label htmlFor="username">username</Label>
-                    <Input
-                      type="text"
-                      name="username"
-                      id="username"
-                      placeholder="with a username"
-                      value={this.state.username}
-                      onChange={this.onChange.bind(this)}
-                    />
-                  </FormGroup>
-                  <FormGroup>
-                    <Label htmlFor="nombre">nombre</Label>
-                    <Input
-                      type="text"
-                      name="nombre"
-                      id="nombre"
-                      placeholder="with a nombre"
-                      value={this.state.nombre}
-                      onChange={this.onChange.bind(this)}
-                    />
-                  </FormGroup>
-                  <FormGroup>
-                    <Label htmlFor="select">Select</Label>
-                    <Input
-                      type="select"
-                      name="select"
-                      id="select"
-                      value={this.state.select}
-                      onChange={this.onChange.bind(this)}
-                    >
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </Input>
-                  </FormGroup>
                   <FormGroup tag="fieldset">
-                    <legend>Radio Buttons</legend>
+                    <legend className="col-form-label ml-2">
+                      <b>¿El acceso al curso resultó fácil?</b>{' '}
+                      <span style={{ color: 'red' }}>*</span>
+                    </legend>
                     <FormGroup check>
                       <Label check>
                         <Input
                           type="radio"
                           name="radio"
                           id="radio"
-                          value="m"
+                          value="1"
                           onChange={this.onChange.bind(this)}
+                          required
                         />{' '}
-                        Hombre
+                        Excelente
                       </Label>
                     </FormGroup>
                     <FormGroup check>
-                      <Label htmlFor="radio">Radio</Label>
                       <Label check>
                         <Input
                           type="radio"
                           name="radio"
                           id="radio"
-                          value="w"
+                          value="2"
                           onChange={this.onChange.bind(this)}
+                          required
                         />{' '}
-                        Mujer
+                        Bueno
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio"
+                          id="radio"
+                          value="3"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        Malo
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio"
+                          id="radio"
+                          value="4"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        Pésimo
                       </Label>
                     </FormGroup>
                   </FormGroup>
+                </div>
+                <div
+                  className="cajaA2 mt-3"
+                  style={{ backgroundColor: '#d5d4d8' }}
+                >
+                  <FormGroup tag="fieldset">
+                    <legend className="col-form-label ml-2">
+                      <b>
+                        ¿El material que se proporcionó en el curso fue el
+                        adecuado para el entendimiento del mismo?
+                      </b>{' '}
+                      <span style={{ color: 'red' }}>*</span>
+                    </legend>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio2"
+                          id="radio2"
+                          value="1"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        Totalmente de acuerdo
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio2"
+                          id="radio2"
+                          value="2"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        De acuerdo
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio2"
+                          id="radio2"
+                          value="3"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        En desacuerdo
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio2"
+                          id="radio2"
+                          value="4"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        Totalmente en desacuerdo
+                      </Label>
+                    </FormGroup>
+                  </FormGroup>
+                </div>
+                <div
+                  className="cajaA2 mt-3"
+                  style={{ backgroundColor: '#d5d4d8' }}
+                >
+                  <FormGroup tag="fieldset">
+                    <legend className="col-form-label ml-2">
+                      <b>
+                        ¿Considero que comprendí adecuadamente todos los temas
+                        abordaos y no me quedaron dudas?
+                      </b>{' '}
+                      <span style={{ color: 'red' }}>*</span>
+                    </legend>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio3"
+                          id="radio3"
+                          value="1"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        Totalmente de acuerdo
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio3"
+                          id="radio3"
+                          value="2"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        De acuerdo
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio3"
+                          id="radio3"
+                          value="3"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        En desacuerdo
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio3"
+                          id="radio3"
+                          value="4"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        Totalmente en desacuerdo
+                      </Label>
+                    </FormGroup>
+                  </FormGroup>
+                </div>
+
+                <div
+                  className="cajaA2 mt-3"
+                  style={{ backgroundColor: '#d5d4d8' }}
+                >
+                  <FormGroup tag="fieldset">
+                    <legend className="col-form-label ml-2">
+                      <b>
+                        ¿La plataforma del curso es amigable y no presentó
+                        fallas en su funcionamiento?
+                      </b>{' '}
+                      <span style={{ color: 'red' }}>*</span>
+                    </legend>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio4"
+                          id="radio4"
+                          value="1"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        Totalmente de acuerdo
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio4"
+                          id="radio4"
+                          value="2"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        De acuerdo
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio4"
+                          id="radio4"
+                          value="3"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        En desacuerdo
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio4"
+                          id="radio4"
+                          value="4"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        Totalmente en desacuerdo
+                      </Label>
+                    </FormGroup>
+                  </FormGroup>
+                </div>
+
+                <div
+                  className="cajaA2 mt-3"
+                  style={{ backgroundColor: '#d5d4d8' }}
+                >
+                  <FormGroup tag="fieldset">
+                    <legend className="col-form-label ml-2">
+                      <b>De manera general, ¿Cómo calificaría el cuso?</b>{' '}
+                      <span style={{ color: 'red' }}>*</span>
+                    </legend>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio5"
+                          id="radio5"
+                          value="1"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        Excelente
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio5"
+                          id="radio5"
+                          value="2"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        Bueno
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio5"
+                          id="radio5"
+                          value="3"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        Malo
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio5"
+                          id="radio5"
+                          value="4"
+                          onChange={this.onChange.bind(this)}
+                          required
+                        />{' '}
+                        Pésimo
+                      </Label>
+                    </FormGroup>
+                  </FormGroup>
+                </div>
+
+                <div
+                  className="cajaA2 mt-3"
+                  style={{ backgroundColor: '#d5d4d8' }}
+                >
                   <FormGroup>
-                    <Label htmlFor="textarea">Text Area</Label>
+                    <Label htmlFor="textarea">
+                      <b> Deja tú opinión.</b>{' '}
+                      <span style={{ color: 'red' }}>*</span>
+                    </Label>
                     <Input
                       type="textarea"
                       name="textarea"
@@ -149,37 +421,34 @@ class Formulario2View extends Component {
                       onChange={this.onChange.bind(this)}
                     />
                   </FormGroup>
-                  <FormGroup check>
-                    <Label check>
-                      <Input
-                        type="checkbox"
-                        name="acept"
-                        id="acept"
-                        value={this.state.acept}
-                        onChange={this.onChange.bind(this)}
-                      />
-                      Acepta
-                    </Label>
-                  </FormGroup>
-                  <FormGroup check row>
-                    <Col className="centrado-fila">
-                      <Button
-                        id="guardar"
-                        name="guardar"
-                        color="primary"
-                        onClick={this.onSave.bind(this)}
-                      >
-                        Enviar
-                        
-                      </Button>
-                     
-                      
-                    </Col>
-                    <p>{this.state.message}</p>
-                  </FormGroup>
                 </div>
 
                 <br />
+                <FormGroup check>
+                  <Label check>
+                    <Input
+                      type="checkbox"
+                      name="acept"
+                      id="acept"
+                      value={this.state.acept}
+                      onChange={this.onChange.bind(this)}
+                    />
+                    Acepta
+                  </Label>
+                </FormGroup>
+                <FormGroup check row>
+                  <Col className="centrado-fila">
+                    <Button
+                      id="guardar"
+                      name="guardar"
+                      color="primary"
+                      onClick={this.onSave.bind(this)}
+                    >
+                      Enviar
+                    </Button>
+                  </Col>
+                  <p>{this.state.message}</p>
+                </FormGroup>
 
                 <p>{JSON.stringify(this.state)}</p>
               </Form>
