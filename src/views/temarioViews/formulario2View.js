@@ -53,7 +53,7 @@ class Formulario2View extends Component {
   validate(e){
     if (this.state.username || this.state.nombre || this.state.select  != true) {
       this.setState({
-        message:'Falta poner Usuario'
+        message:'Falta este campo'
       })
     }
   }
