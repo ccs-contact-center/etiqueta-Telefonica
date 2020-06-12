@@ -85,16 +85,7 @@ class ActividadView extends Component {
                 opción de acuerdo a cada pregunta.{' '}
               </p>
               <Form onSubmit={this.handleSubmitV}>
-                <FormGroup>
-                  <Label for="exampleEmail">pregunta</Label>
-                  <Input
-                    type="text"
-                    name="pregunta"
-                    id="pregunta"
-                    placeholder="with a placeholder"
-                  />
-                  {this.errors.pregunta && <p>{this.errors.pregunta}</p>}
-                </FormGroup>
+               
                 <div className="cajaA2" style={{ backgroundColor: '#d5d4d8' }}>
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
@@ -105,19 +96,19 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta1aa"
-                          id="pregunta1aa"
-                          onChange={this.handleChangeV}
+                          name="pregunta1"
+                          id="pregunta1"
+                          required
                         />
 
                         <Label check>(a) Es la estructura de la llamada.</Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="pregunta1b" id="pregunta1b" />
+                        <Input type="radio" name="pregunta1" id="pregunta1" required />
                         <Label check>(b) Es la etiqueta telefónica. </Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="pregunta1c" id="pregunta1c" />
+                        <Input type="radio" name="pregunta1" id="pregunta1" required />
                         <Label check>
                           (c) Es la manera de contestar el teléfono.
                         </Label>
@@ -144,14 +135,14 @@ class ActividadView extends Component {
                         </Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="pregunta2b" id="pregunta2b" />
+                        <Input type="radio" name="pregunta2a" id="pregunta2a" />
                         <Label check>
                           (b) Se tendrá un mejor control de llamada y siempre
                           nos llamará.
                         </Label>
                       </FormGroup>
                       <FormGroup check>
-                        <Input type="radio" name="pregunta2c" id="pregunta2c" />
+                        <Input type="radio" name="pregunta2a" id="pregunta2a" />
                         <Label check>
                           (c) Nos ayudará a tener en ocasiones homologado el
                           servicio al cliente.
