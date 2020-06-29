@@ -11,7 +11,6 @@ import {
   Input,
 } from 'reactstrap'
 
-
 const validate = (values) => {
   const errors = {}
   console.log(values)
@@ -31,7 +30,7 @@ class FormularioView extends Component {
 
     this.state = {
       errors: {
-         //pregunta1 : 'No esta seleccionado.'
+        //pregunta1 : 'No esta seleccionado.'
       },
     }
 
@@ -68,20 +67,35 @@ class FormularioView extends Component {
               </p>
               <Form onSubmit={this.handleSubmit}>
                 <div className="cajaA2" style={{ backgroundColor: '#d5d4d8' }}>
-                  <FormGroup>
-                    <Label htmlFor="pregunta1">pregunta</Label>
-                    <Input
-                      type="text"
-                      name="pregunta1"
-                      id="pregunta1"
-                      placeholder="Escribe respuesta."
-                    />
-                    {this.errors.pregunta1 && <p>{this.errors.pregunta1}</p>}
+                  <FormGroup tag="fieldset">
+                    <legend>Radio Buttons</legend>
+                    <FormGroup check>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio"
+                          id="radio"
+                          value="m"
+                          onChange={this.onChange.bind(this)}
+                        />{' '}
+                        Hombre
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label htmlFor="radio">Radio</Label>
+                      <Label check>
+                        <Input
+                          type="radio"
+                          name="radio"
+                          id="radio"
+                          value="w"
+                          onChange={this.onChange.bind(this)}
+                        />{' '}
+                        Mujer
+                      </Label>
+                    </FormGroup>
                   </FormGroup>
                 </div>
-
-               
-                 
 
                 <br />
 
