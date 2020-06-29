@@ -22,6 +22,7 @@ import TemaDiezView from './temarioViews/TemaDiezView'
 import TemaOnceView from './temarioViews/TemaOnceView'
 import DespedidaView from './temarioViews/DespedidaView'
 import Actividad2View from './temarioViews/Actividad2View'
+import Formulario2View from './temarioViews/formulario2View'
 
 //import RecapitulacionView from './temarioViews/RecapitulacionView'
 
@@ -48,7 +49,7 @@ class Inicio extends Component {
         <Card>
           {this.state.index === 0 ? (
            // <DespedidaView />
-            <BienvenidaView />
+            <Formulario2View />
           ) : this.state.index === 1 ? (
             <ObjetivoView />
           ) : this.state.index === 2 ? (
