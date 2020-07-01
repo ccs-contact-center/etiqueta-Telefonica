@@ -73,8 +73,8 @@ class FormularioView extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio"
-                          id="radio"
+                          name="pregunta1"
+                          id="pregunta1"
                           value="m"
                           onChange={this.onChange.bind(this)}
                         />{' '}
@@ -86,8 +86,8 @@ class FormularioView extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio"
-                          id="radio"
+                          name="pregunta2"
+                          id="pregunta2"
                           value="w"
                           onChange={this.onChange.bind(this)}
                         />{' '}
