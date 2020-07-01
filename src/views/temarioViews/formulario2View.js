@@ -47,6 +47,7 @@ class Formulario2View extends Component {
 
   onSave(e) {
     API.insertarEncuesta(this.state);
+    alert("según ya se envio");
     if (!this.validate()) {
       return
     }
