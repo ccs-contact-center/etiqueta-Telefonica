@@ -11,6 +11,9 @@ import {
   Input,
 } from 'reactstrap'
 
+import API_CCS from '../../services/API_CCS';
+const API = new API_CCS();
+
 class Formulario2View extends Component {
   loading = () => (
     <div className="animated fadeIn pt-1 text-center">Cargando...</div>
@@ -19,12 +22,12 @@ class Formulario2View extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      radio: '',
-      radio2: '',
-      radio3: '',
-      radio4: '',
-      radio5: '',
-      textarea: '',
+      pregunta1: '',
+      pregunta2: '',
+      pregunta3: '',
+      pregunta4: '',
+      pregunta5: '',
+      pregunta6: '',
       acept: '',
       message: '',
     }
@@ -90,8 +93,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio"
-                          id="radio"
+                          name="pregunta1"
+                          id="pregunta1"
                           value="1"
                           onChange={this.onChange.bind(this)}
                           required
@@ -103,8 +106,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio"
-                          id="radio"
+                          name="pregunta1"
+                          id="pregunta1"
                           value="2"
                           onChange={this.onChange.bind(this)}
                           required
@@ -116,8 +119,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio"
-                          id="radio"
+                          name="pregunta1"
+                          id="pregunta1"
                           value="3"
                           onChange={this.onChange.bind(this)}
                           required
@@ -129,8 +132,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio"
-                          id="radio"
+                          name="pregunta1"
+                          id="pregunta1"
                           value="4"
                           onChange={this.onChange.bind(this)}
                           required
@@ -156,8 +159,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio2"
-                          id="radio2"
+                          name="pregunta2"
+                          id="pregunta2"
                           value="1"
                           onChange={this.onChange.bind(this)}
                           required
@@ -169,8 +172,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio2"
-                          id="radio2"
+                          name="pregunta2"
+                          id="pregunta2"
                           value="2"
                           onChange={this.onChange.bind(this)}
                           required
@@ -182,8 +185,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio2"
-                          id="radio2"
+                          name="pregunta2"
+                          id="pregunta2"
                           value="3"
                           onChange={this.onChange.bind(this)}
                           required
@@ -195,8 +198,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio2"
-                          id="radio2"
+                          name="pregunta2"
+                          id="pregunta2"
                           value="4"
                           onChange={this.onChange.bind(this)}
                           required
@@ -222,8 +225,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio3"
-                          id="radio3"
+                          name="pregunta3"
+                          id="pregunta3"
                           value="1"
                           onChange={this.onChange.bind(this)}
                           required
@@ -235,8 +238,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio3"
-                          id="radio3"
+                          name="pregunta3"
+                          id="pregunta3"
                           value="2"
                           onChange={this.onChange.bind(this)}
                           required
@@ -248,8 +251,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio3"
-                          id="radio3"
+                          name="pregunta3"
+                          id="pregunta3"
                           value="3"
                           onChange={this.onChange.bind(this)}
                           required
@@ -261,8 +264,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio3"
-                          id="radio3"
+                          name="pregunta3"
+                          id="pregunta3"
                           value="4"
                           onChange={this.onChange.bind(this)}
                           required
@@ -289,8 +292,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio4"
-                          id="radio4"
+                          name="pregunta4"
+                          id="pregunta4"
                           value="1"
                           onChange={this.onChange.bind(this)}
                           required
@@ -302,8 +305,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio4"
-                          id="radio4"
+                          name="pregunta4"
+                          id="pregunta4"
                           value="2"
                           onChange={this.onChange.bind(this)}
                           required
@@ -315,8 +318,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio4"
-                          id="radio4"
+                          name="pregunta4"
+                          id="pregunta4"
                           value="3"
                           onChange={this.onChange.bind(this)}
                           required
@@ -328,8 +331,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio4"
-                          id="radio4"
+                          name="pregunta4"
+                          id="pregunta4"
                           value="4"
                           onChange={this.onChange.bind(this)}
                           required
@@ -353,8 +356,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio5"
-                          id="radio5"
+                          name="pregunta5"
+                          id="pregunta5"
                           value="1"
                           onChange={this.onChange.bind(this)}
                           required
@@ -366,8 +369,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio5"
-                          id="radio5"
+                          name="pregunta5"
+                          id="pregunta5"
                           value="2"
                           onChange={this.onChange.bind(this)}
                           required
@@ -379,8 +382,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio5"
-                          id="radio5"
+                          name="pregunta5"
+                          id="pregunta5"
                           value="3"
                           onChange={this.onChange.bind(this)}
                           required
@@ -392,8 +395,8 @@ class Formulario2View extends Component {
                       <Label check>
                         <Input
                           type="radio"
-                          name="radio5"
-                          id="radio5"
+                          name="pregunta5"
+                          id="pregunta5"
                           value="4"
                           onChange={this.onChange.bind(this)}
                           required
@@ -415,8 +418,8 @@ class Formulario2View extends Component {
                     </Label>
                     <Input
                       type="textarea"
-                      name="textarea"
-                      id="textarea"
+                      name="pregunta6"
+                      id="pregunta6"
                       value={this.state.about}
                       onChange={this.onChange.bind(this)}
                     />
