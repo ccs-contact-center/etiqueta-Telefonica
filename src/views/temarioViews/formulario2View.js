@@ -46,10 +46,12 @@ class Formulario2View extends Component {
   }
 
   onSave(e) {
+    API.insertarEncuesta(this.state);
     if (!this.validate()) {
       return
     }
     this.setState({
+      
       message: 'Guardado.....',
     })
   }
