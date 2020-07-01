@@ -1,5 +1,6 @@
 import AuthService from "./AuthService";
 
+//Estas son las lineas que debes switchear cuando estes haciendo tus pruebas
 const hostURL = "https://api.ccscontactcenter.com";
 //const hostURL = 'http://localhost:3020'
 
@@ -38,6 +39,10 @@ export default class API_CCS {
   }
 
   insertarEncuesta(data){
+    /*Esta función está bien, solamente que cuando hagas tus pruebas, debes de cambiar 
+    la variable hostURL (Lineas 3 y 4 de este archivo), para apuntar a localhost y no a api.ccscontactcenter
+    cuando ya este probado y funcionando en localhost, publicamos tu endpoint en producción (api.ccscontactcenter.com), pero ese es otro paso
+    */
     return this.fetch(hostURL + "/v1/capacitacion/formularioEncuesta", {
       method: "POST",
        body: JSON.stringify("data"),
