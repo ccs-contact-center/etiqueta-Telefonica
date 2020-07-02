@@ -70,25 +70,11 @@ class Formulario2View extends Component {
     
     */
 
-   try {
-    var  respuesta = await API.insertarEncuesta(this.state)
-    alert("Se guardo la encuesta número " + respuesta[0].id) 
-  } catch (err) {
-    console.log("loggea si hay un error")
-  }
-
-    API.insertarEncuesta(this.state);
-    //Aqui estas lanzando la alerta lo insertes o no lo insertes, por eso es importante que hagas lo del comment de arriba para validar si se inserta o no.
-    alert("según ya se envio");
-
-    //Aqui estas insertando y luego validando tu formulario, tendrias que ejecutar la API en donde está el return de tu validación, tendria que quedar algo mas o menos asi:
-
-    /*
     
      
 
 
-    */
+  
    if (!this.validate()) {
     try {
         var respuesta = await API.insertarEncuesta(this.state)
