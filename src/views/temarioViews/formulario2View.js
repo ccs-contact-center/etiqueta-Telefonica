@@ -45,7 +45,7 @@ class Formulario2View extends Component {
     }
   }
 
-  onSave(e) {
+ async onSave(e) {
     /*
     Aqui hay varios puntos... primero, debes de cachar la respuesta de tu llamada a la api en algun lado, podria quedar asi:
 
@@ -67,13 +67,15 @@ class Formulario2View extends Component {
 
     (Linea 48) async onSave(e){ (... todo lo demas)
 
-    try {
-        var respuesta = await API.insertarEncuesta(this.state)
-        alert("Se guardo la encuesta número " + respuesta[0].id) 
-      } catch (err) {
-        console.log("loggea si hay un error")
-      }
+    
     */
+
+   try {
+    var  respuesta = await API.insertarEncuesta(this.state)
+    alert("Se guardo la encuesta número " + respuesta[0].id) 
+  } catch (err) {
+    console.log("loggea si hay un error")
+  }
 
     API.insertarEncuesta(this.state);
     //Aqui estas lanzando la alerta lo insertes o no lo insertes, por eso es importante que hagas lo del comment de arriba para validar si se inserta o no.
@@ -83,19 +85,20 @@ class Formulario2View extends Component {
 
     /*
     
-      if (!this.validate()) {
-        try {
-            var respuesta = await API.insertarEncuesta(this.state)
-            alert("Se guardo la encuesta número " + respuesta[0].id) 
-          } catch (err) {
-            console.log("loggea si hay un error")
-          }
-        } else {
-          //Aqui deberias hacer algo si no está validado el form
-        }
+     
 
 
     */
+   if (!this.validate()) {
+    try {
+        var respuesta = await API.insertarEncuesta(this.state)
+        alert("Se guardo la encuesta número " + respuesta[0].id) 
+      } catch (err) {
+        console.log("loggea si hay un error")
+      }
+    } else {}
+      //Aqui deberias hacer algo si no está validado el form
+    // 
 
     if (!this.validate()) {
       return;
