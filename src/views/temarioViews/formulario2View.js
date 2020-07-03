@@ -104,7 +104,7 @@ class Formulario2View extends Component {
         <Row>
           <Col>
             <CardHeader className="">
-              <h2> Evaluación: </h2>
+              <h2> Encuesta: </h2>
             </CardHeader>
             <CardBody className="">
               <p>
