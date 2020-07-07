@@ -30,6 +30,7 @@ export default class API_CCS {
       .then(response => response.json());
   }
 
+
   getCampaignAvatar(id) {
     return this.fetch(hostURL + "/v1/Campaigns/Avatar?id=" + id, {
       method: "GET"
@@ -44,6 +45,15 @@ export default class API_CCS {
     cuando ya este probado y funcionando en localhost, publicamos tu endpoint en producción (api.ccscontactcenter.com), pero ese es otro paso
     */
     return this.fetch(hostURL + "/v1/capacitacion/formularioEncuesta", {
+      method: "POST",
+       body: JSON.stringify(data),
+    }).then(res => {
+      return Promise.resolve(res);
+    });
+  }
+
+  insertarActividad1(data){
+    return this.fetch(hostURL + "/v1/capacitacion/formularioActividad1Tele", {
       method: "POST",
        body: JSON.stringify(data),
     }).then(res => {
