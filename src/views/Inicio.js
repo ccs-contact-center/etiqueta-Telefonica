@@ -49,7 +49,7 @@ class Inicio extends Component {
         <Card>
           {this.state.index === 0 ? (
            // <DespedidaView />
-            <Formulario2View />
+            <Actividad2View />
           ) : this.state.index === 1 ? (
             <ObjetivoView />
           ) : this.state.index === 2 ? (
