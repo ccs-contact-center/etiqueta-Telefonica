@@ -91,16 +91,21 @@ class Formulario2View extends Component {
   }
 
   validate(e) {
-    if (this.state.acept != true) {
+    if (this.state.acept !== true) {
       this.setState({
         message: 'Dé en  aceptar',
+      
       })
     }
+    alert(this.state.message);
   }
+
 
   render() {
     return (
       <div className="animated fadeIn">
+        
+
         <Row>
           <Col>
             <CardHeader className="">
@@ -484,7 +489,7 @@ class Formulario2View extends Component {
                       Enviar
                     </Button>
                   </Col>
-                  <p>{this.state.message}</p>
+                  
                 </FormGroup>
 
                 {/* <p>{JSON.stringify(this.state)}</p> */}
