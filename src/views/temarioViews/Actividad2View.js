@@ -155,7 +155,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto2"
-                          id="acierto2"
+                    
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -169,7 +169,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto2"
-                          id="acierto2"
+                
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -183,7 +183,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto2"
-                          id="acierto2"
+              
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -211,7 +211,7 @@ class ActividadView extends Component {
                         <Input 
                         type="radio" 
                         name="acierto3" 
-                        id="acierto3"
+                
                         value="a"
                         onChange={this.onChange.bind(this)}
                         />
@@ -221,7 +221,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto3"
-                          id="acierto3"
+              
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -232,7 +232,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto3"
-                          id="acierto3"
+              
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -257,7 +257,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto4"
-                          id="acierto4"
+                  
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -271,7 +271,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto4"
-                          id="acierto4"
+                
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -285,7 +285,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto4"
-                          id="acierto4"
+                  
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -317,7 +317,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto5"
-                          id="acierto5"
+              
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -328,7 +328,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto5"
-                          id="acierto5"
+                
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -339,7 +339,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto5"
-                          id="acierto5"
+                    
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -368,7 +368,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto6"
-                          id="acierto6"
+                        
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -381,7 +381,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto6"
-                          id="acierto6"
+                      
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -394,7 +394,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto6"
-                          id="acierto6"
+                    
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -421,7 +421,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto7"
-                          id="acierto7"
+                        
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -432,7 +432,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto7"
-                          id="acierto7"
+                        
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -443,7 +443,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto7"
-                          id="acierto7"
+                          
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -471,7 +471,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto8"
-                          id="acierto8"
+                        
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -485,7 +485,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto8"
-                          id="acierto8"
+                          
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -498,7 +498,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto8"
-                          id="acierto8"
+                          
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -526,7 +526,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto9"
-                          id="acierto9"
+                        
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -540,7 +540,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto9"
-                          id="acierto9"
+                        
                           onChange={this.onChange.bind(this)}
                           required
                         />
@@ -552,7 +552,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto9"
-                          id="acierto9"
+                     
                           onChange={this.onChange.bind(this)}
                           required
                         />
@@ -582,7 +582,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto10"
-                          id="acierto10"
+                      
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -593,7 +593,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto10"
-                          id="acierto10"
+                        
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -604,7 +604,7 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto10"
-                          id="acierto10"
+                        
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
