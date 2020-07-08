@@ -55,15 +55,12 @@ class ActividadView extends Component {
         console.log('loggea si hay un error')
       }
     } else {
-      //alert(this.state.message);
+    alert(this.state.message);
     }
-
-    
-  
   }
 
   validate(e) {
-    if (this.state.name !== true) {
+    if (this.state.value !== true) {
       this.setState({
         message: 'Falta campos por llenar',
       
