@@ -37,7 +37,7 @@ class ActividadView extends Component {
 
     }
 
-    this.handleSubmit = this.handleSubmit.bind(this)
+ 
   }
 
   onChange(e){
@@ -96,7 +96,7 @@ class ActividadView extends Component {
                 Es hora de saber qué has aprendido de este curso. Elige la
                 opción de acuerdo a cada pregunta.{' '}
               </p>
-              <Form onSubmit={this.handleSubmitV}>
+              <Form onSubmit={this.handleSubmit}>
                 <div className="cajaA2" style={{ backgroundColor: '#d5d4d8' }}>
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
@@ -623,7 +623,9 @@ class ActividadView extends Component {
                 <FormGroup check row>
                   <Col className="centrado-fila">
                     <Button
-                      color="primary"
+                       id="guardar"
+                       name="guardar"
+                       color="primary"
                       onClick={ this.onSave.bind(this) }
 
                     >
