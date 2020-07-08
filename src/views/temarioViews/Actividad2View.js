@@ -24,16 +24,16 @@ class ActividadView extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      pregunta1:'',
-      pregunta2:'',
-      pregunta3:'',
-      pregunta4:'',
-      pregunta5:'',
-      pregunta6:'',
-      pregunta7:'',
-      pregunta8:'',
-      pregunta9:'',
-      pregunta10:'',
+      acierto1:'',
+      acierto2:'',
+      acierto3:'',
+      acierto4:'',
+      acierto5:'',
+      acierto6:'',
+      acierto7:'',
+      acierto8:'',
+      acierto9:'',
+      acierto10:'',
 
     }
 
@@ -49,30 +49,27 @@ class ActividadView extends Component {
   async onSave(e){
     if (!this.validate()) {
       try {
-        var respuesta = await API.insertarEncuesta(this.state)
+        var respuesta = await API.insertarActividad1(this.state)
         alert('Se guardo la encuesta número ' + respuesta[0].id)
       } catch (err) {
         console.log('loggea si hay un error')
       }
     } else {
+      //alert(this.state.message);
     }
 
-    if (!this.validate()) {
-      return
-    }
-    this.setState({
-      message: 'Guardado.....',
-    })
+    
+  
   }
 
   validate(e) {
-    if (this.state.acept !== true) {
+    if (this.state.name !== true) {
       this.setState({
-        message: 'Dé en  aceptar',
+        message: 'Falta campos por llenar',
       
       })
     }
-    alert(this.state.message);
+  
   }
 
   handleSubmit(event) {
@@ -110,7 +107,7 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta1"
+                          name="acierto1"
                         
                           value="a"
                           onChange={this.onChange.bind(this)}
@@ -122,7 +119,7 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta1"
+                          name="acierto1"
                          
                           value="b"
                           onChange={(this.onChange.bind(this))}
@@ -133,7 +130,7 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta1"
+                          name="acierto1"
                          
                           required
                           value="c"
@@ -160,8 +157,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta2"
-                          id="pregunta2"
+                          name="acierto2"
+                          id="acierto2"
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -174,8 +171,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta2"
-                          id="pregunta2"
+                          name="acierto2"
+                          id="acierto2"
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -188,8 +185,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta2"
-                          id="pregunta2"
+                          name="acierto2"
+                          id="acierto2"
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -216,8 +213,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input 
                         type="radio" 
-                        name="pregunta3" 
-                        id="pregunta3"
+                        name="acierto3" 
+                        id="acierto3"
                         value="a"
                         onChange={this.onChange.bind(this)}
                         />
@@ -226,8 +223,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta3"
-                          id="pregunta3"
+                          name="acierto3"
+                          id="acierto3"
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -237,8 +234,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta3"
-                          id="pregunta3"
+                          name="acierto3"
+                          id="acierto3"
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -262,8 +259,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta4"
-                          id="pregunta4"
+                          name="acierto4"
+                          id="acierto4"
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -276,8 +273,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta4"
-                          id="pregunta4"
+                          name="acierto4"
+                          id="acierto4"
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -290,8 +287,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta4"
-                          id="pregunta4"
+                          name="acierto4"
+                          id="acierto4"
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -322,8 +319,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta5"
-                          id="pregunta5"
+                          name="acierto5"
+                          id="acierto5"
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -333,8 +330,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta5a"
-                          id="pregunta5"
+                          name="acierto5"
+                          id="acierto5"
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -344,8 +341,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta5"
-                          id="pregunta5"
+                          name="acierto5"
+                          id="acierto5"
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -373,8 +370,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta6"
-                          id="pregunta6"
+                          name="acierto6"
+                          id="acierto6"
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -386,8 +383,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta6"
-                          id="pregunta6"
+                          name="acierto6"
+                          id="acierto6"
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -399,8 +396,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta6"
-                          id="pregunta6"
+                          name="acierto6"
+                          id="acierto6"
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -426,8 +423,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta7"
-                          id="pregunta7"
+                          name="acierto7"
+                          id="acierto7"
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -437,8 +434,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta7"
-                          id="pregunta7"
+                          name="acierto7"
+                          id="acierto7"
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -448,8 +445,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta7"
-                          id="pregunta7"
+                          name="acierto7"
+                          id="acierto7"
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -476,8 +473,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta8"
-                          id="pregunta8"
+                          name="acierto8"
+                          id="acierto8"
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -490,8 +487,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta8"
-                          id="pregunta8"
+                          name="acierto8"
+                          id="acierto8"
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -503,8 +500,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta8"
-                          id="pregunta8"
+                          name="acierto8"
+                          id="acierto8"
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -531,8 +528,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta9"
-                          id="pregunta9"
+                          name="acierto9"
+                          id="acierto9"
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -545,8 +542,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta9"
-                          id="pregunta9"
+                          name="acierto9"
+                          id="acierto9"
                           onChange={this.onChange.bind(this)}
                           required
                         />
@@ -557,8 +554,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta9"
-                          id="pregunta9"
+                          name="acierto9"
+                          id="acierto9"
                           onChange={this.onChange.bind(this)}
                           required
                         />
@@ -587,8 +584,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta10"
-                          id="pregunta10"
+                          name="acierto10"
+                          id="acierto10"
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -598,8 +595,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta10"
-                          id="pregunta10"
+                          name="acierto10"
+                          id="acierto10"
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -609,8 +606,8 @@ class ActividadView extends Component {
                       <FormGroup check>
                         <Input
                           type="radio"
-                          name="pregunta10"
-                          id="pregunta10"
+                          name="acierto10"
+                          id="acierto10"
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
