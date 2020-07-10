@@ -49,7 +49,7 @@ class Inicio extends Component {
         <Card>
           {this.state.index === 0 ? (
            // <DespedidaView />
-            <Actividad2View />
+            <BienvenidaView />
           ) : this.state.index === 1 ? (
             <ObjetivoView />
           ) : this.state.index === 2 ? (
@@ -80,7 +80,10 @@ class Inicio extends Component {
             <Actividad2View />
           ) : this.state.index === 15 ? (
             <DespedidaView />
-          ) : null}
+          ): this.state.index === 16 ? (
+            <Formulario2View />
+          
+           ) : null}
           <br />
           <CardFooter>
             <Navegador handleNavigation={this.setIndex} maxIndex={15} />
