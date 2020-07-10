@@ -40,10 +40,14 @@ export default class API_CCS {
   }
 
   insertarEncuesta(data){
+
     /*Esta función está bien, solamente que cuando hagas tus pruebas, debes de cambiar 
     la variable hostURL (Lineas 3 y 4 de este archivo), para apuntar a localhost y no a api.ccscontactcenter
     cuando ya este probado y funcionando en localhost, publicamos tu endpoint en producción (api.ccscontactcenter.com), pero ese es otro paso
     */
+
+
+
     return this.fetch(hostURL + "/v1/capacitacion/formularioEncuesta", {
       method: "POST",
        body: JSON.stringify(data),
@@ -53,7 +57,7 @@ export default class API_CCS {
   }
 
   insertarActividad1(data){
-    return this.fetch(hostURL + "/v1/capacitacion/formularioActividad1Tele", {
+    return this.fetch(hostURL + "/v1/capacitacion/formEtiquetaActividad2", {
       method: "POST",
        body: JSON.stringify(data),
     }).then(res => {
