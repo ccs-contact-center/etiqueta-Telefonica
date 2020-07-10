@@ -24,50 +24,43 @@ class ActividadView extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      acierto1:'',
-      acierto2:'',
-      acierto3:'',
-      acierto4:'',
-      acierto5:'',
-      acierto6:'',
-      acierto7:'',
-      acierto8:'',
-      acierto9:'',
-      acierto10:'',
-
+      acierto1: '',
+      acierto2: '',
+      acierto3: '',
+      acierto4: '',
+      acierto5: '',
+      acierto6: '',
+      acierto7: '',
+      acierto8: '',
+      acierto9: '',
+      acierto10: '',
     }
-
- 
   }
 
-  onChange(e){
+  onChange(e) {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     })
   }
 
-  async onSave(e){
-    if (!this.validate()) {
-      try {
-        var respuesta = await API.insertarActividad1(this.state)
-        alert('Se guardo la encuesta número ' + respuesta[0].id)
-      } catch (err) {
-        console.log('loggea si hay un error')
-      }
-    } else {
-    alert(this.state.message);
+  async onSave(e) {
+    try {
+      var respuesta = await API.insertarActividad1(this.state)
+      alert('Se guardo la encuesta número ' + respuesta[0].id)
+    } catch (err) {
+      console.log('loggea si hay un error')
     }
   }
 
-  validate(e) {
-    if (this.state.value !== true) {
-      this.setState({
-        message: 'Falta campos por llenar',
-      
-      })
-    }
-  
-  }
+  // validate(e) {
+  //   if (this.state.value !== true) {
+  //     this.setState({
+  //       message: 'Falta campos por llenar',
+
+  //     })
+  //   }
+
+  // }
 
   handleSubmit(event) {
     alert('A name was submitted: ' + this.state.value)
@@ -105,7 +98,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto1"
-                        
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -117,9 +109,8 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto1"
-                         
                           value="b"
-                          onChange={(this.onChange.bind(this))}
+                          onChange={this.onChange.bind(this)}
                           required
                         />
                         <Label check>(b) Es la etiqueta telefónica. </Label>
@@ -128,10 +119,9 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto1"
-                         
                           required
                           value="c"
-                          onChange={(this.onChange.bind(this))}
+                          onChange={this.onChange.bind(this)}
                         />
                         <Label check>
                           (c) Es la manera de contestar el teléfono.
@@ -155,7 +145,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto2"
-                    
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -169,7 +158,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto2"
-                
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -183,7 +171,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto2"
-              
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -208,12 +195,11 @@ class ActividadView extends Component {
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
-                        <Input 
-                        type="radio" 
-                        name="acierto3" 
-                
-                        value="a"
-                        onChange={this.onChange.bind(this)}
+                        <Input
+                          type="radio"
+                          name="acierto3"
+                          value="a"
+                          onChange={this.onChange.bind(this)}
                         />
                         <Label check>(a) Inicio, Desarrollo, Cierre.</Label>
                       </FormGroup>
@@ -221,7 +207,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto3"
-              
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -232,7 +217,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto3"
-              
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -257,7 +241,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto4"
-                  
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -271,7 +254,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto4"
-                
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -285,7 +267,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto4"
-                  
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -317,7 +298,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto5"
-              
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -328,7 +308,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto5"
-                
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -339,7 +318,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto5"
-                    
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -368,7 +346,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto6"
-                        
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -381,7 +358,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto6"
-                      
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -394,7 +370,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto6"
-                    
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -421,7 +396,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto7"
-                        
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -432,7 +406,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto7"
-                        
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -443,7 +416,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto7"
-                          
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -471,7 +443,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto8"
-                        
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -485,7 +456,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto8"
-                          
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -498,7 +468,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto8"
-                          
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -526,7 +495,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto9"
-                        
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -540,7 +508,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto9"
-                        
                           onChange={this.onChange.bind(this)}
                           required
                         />
@@ -552,7 +519,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto9"
-                     
                           onChange={this.onChange.bind(this)}
                           required
                         />
@@ -582,7 +548,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto10"
-                      
                           value="a"
                           onChange={this.onChange.bind(this)}
                           required
@@ -593,7 +558,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto10"
-                        
                           value="b"
                           onChange={this.onChange.bind(this)}
                           required
@@ -604,7 +568,6 @@ class ActividadView extends Component {
                         <Input
                           type="radio"
                           name="acierto10"
-                        
                           value="c"
                           onChange={this.onChange.bind(this)}
                           required
@@ -620,20 +583,19 @@ class ActividadView extends Component {
                 <FormGroup check row>
                   <Col className="centrado-fila">
                     <Button
-                       id="guardar"
-                       name="guardar"
-                       color="primary"
-                      onClick={ this.onSave.bind(this) }
-
+                      id="guardar"
+                      name="guardar"
+                      color="primary"
+                      onClick={this.onSave.bind(this)}
                     >
                       Enviar
                     </Button>
                   </Col>
                 </FormGroup>
               </Form>
-              <div>
+              {/* <div>
                 <p>{JSON.stringify(this.state)}</p>
-              </div>
+              </div> */}
             </CardBody>
           </Col>
         </Row>
