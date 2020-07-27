@@ -12,7 +12,7 @@ import {
 } from 'reactstrap'
 import SweetAlert from 'sweetalert2-react'
 //import { bind } from 'core-js/fn/function'
-
+import AuthService from "../../services/AuthService";
 import API_CCS from '../../services/API_CCS'
 const API = new API_CCS()
 
@@ -23,6 +23,7 @@ class ActividadView extends Component {
 
   constructor(props) {
     super(props)
+    this.Auth = new AuthService();
     this.state = {
       acierto1: '',
       acierto2: '',
@@ -34,6 +35,8 @@ class ActividadView extends Component {
       acierto8: '',
       acierto9: '',
       acierto10: '',
+      id_ccs: this.Auth.getProfile().id_ccs,
+      form: "etiquetaTelefonica",
     }
   }
 
@@ -45,8 +48,8 @@ class ActividadView extends Component {
 
   async onSave(e) {
     try {
-      var respuesta = await API.insertarActividad1(this.state)
-      alert('Se guardo la encuesta número ' + respuesta[0].id)
+      var respuesta = await API.guardaActividad(this.state)
+      alert('Se guardo actividad, con id ' + respuesta[0].id)
     } catch (err) {
       console.log('loggea si hay un error')
     }
