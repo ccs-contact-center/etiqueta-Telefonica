@@ -1,47 +1,51 @@
-import React, { Component } from 'react'
-import { ReactSortable } from 'react-sortablejs'
-import Nota from './notasReferencia'
-import { Row, Col } from 'reactstrap'
-import tabla01 from '../../../assets/img/ImgEtiquetaTelefonica/tabla01.jpg'
+import React, { Component } from "react";
+import { ReactSortable } from "react-sortablejs";
+import Nota from "./notasReferencia";
+import { Row, Col, Button } from "reactstrap";
+import tabla01 from "../../../assets/img/ImgEtiquetaTelefonica/tabla01.jpg";
+import AuthService from "../../../services/AuthService";
+import API_CCS from "../../../services/API_CCS";
+const API = new API_CCS();
 
 class Actividad1 extends Component {
   constructor(props) {
-    super(props)
+    super(props);
+    this.Auth = new AuthService();
     this.state = {
       list: [
         {
-          id: '1',
-          name: 'A',
+          id: "1",
+          name: "A",
         },
         {
-          id: '2',
-          name: 'B',
+          id: "2",
+          name: "B",
         },
         {
-          id: '3',
-          name: 'C',
+          id: "3",
+          name: "C",
         },
         {
-          id: '4',
-          name: 'D',
+          id: "4",
+          name: "D",
         },
       ],
       list2: [
         {
-          id: '5',
-          name: '	A',
+          id: "5",
+          name: "	A",
         },
         {
-          id: '6',
-          name: 'B',
+          id: "6",
+          name: "B",
         },
         {
-          id: '7',
-          name: '	C',
+          id: "7",
+          name: "	C",
         },
         {
-          id: '8 ',
-          name: '	D',
+          id: "8 ",
+          name: "	D",
         },
       ],
       list3: [],
@@ -52,9 +56,18 @@ class Actividad1 extends Component {
       list8: [],
       list9: [],
       list10: [],
+      id_ccs: this.Auth.getProfile().id_ccs,
+      form: "etiquetaTelefonica-1",
+    };
+  }
+  async onSave(e) {
+    try {
+      var respuesta = await API.guardaActividad(this.state);
+      alert("Se guardo la actividad 1, con id: " + respuesta[0].id);
+    } catch (err) {
+      console.log("loggea si hay un error");
     }
   }
-
   render() {
     return (
       <Row className="  centrado-fila ">
@@ -62,15 +75,15 @@ class Actividad1 extends Component {
           <div className="card bg-fondo-btn2">
             <h6 className="text-center text-white mt-2">Terminos</h6>
             <div className="centrado-fila bgImgTabla">
-              <div style={{paddingTop:'90px'}}>
+              <div style={{ paddingTop: "90px" }}>
                 <ReactSortable
                   list={this.state.list}
                   setList={(newState) => this.setState({ list: newState })}
                   group="shared-group-name"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                 >
                   {this.state.list.map((item) => (
-                    <div key={item.id} style={{marginBottom:'60px'}}>
+                    <div key={item.id} style={{ marginBottom: "60px" }}>
                       <div className="card  m-3 cursor-draggable text-center">
                         <div className="text-dark">{item.name}</div>
                       </div>
@@ -87,15 +100,15 @@ class Actividad1 extends Component {
                 />
               </div>
 
-              <div style={{paddingTop:'90px'}}>
+              <div style={{ paddingTop: "90px" }}>
                 <ReactSortable
                   list={this.state.list2}
                   setList={(newState) => this.setState({ list2: newState })}
                   group="shared-group-name"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                 >
                   {this.state.list2.map((item) => (
-                    <div key={item.id}  style={{marginBottom:'60px'}}>
+                    <div key={item.id} style={{ marginBottom: "60px" }}>
                       <div className="card  m-3 cursor-draggable text-center">
                         <div className="text-dark">{item.name}</div>
                       </div>
@@ -115,7 +128,7 @@ class Actividad1 extends Component {
               <Col
                 xs="2"
                 className="border border-white "
-                style={{ padding: '10px' }}
+                style={{ padding: "10px" }}
               >
                 <ReactSortable
                   list={this.state.list3}
@@ -126,7 +139,7 @@ class Actividad1 extends Component {
                     <div key={item.id}>
                       <div
                         className="card cursor-draggable text-center "
-                        style={{ marginBottom: '0px' }}
+                        style={{ marginBottom: "0px" }}
                       >
                         <div className="text-dark">{item.name}</div>
                       </div>
@@ -135,7 +148,7 @@ class Actividad1 extends Component {
                 </ReactSortable>
               </Col>
               <Col xs="10">
-                <p style={{ marginBottom: '0px' }}>
+                <p style={{ marginBottom: "0px" }}>
                   ¡Necesito que me resuelvas porque tengo mucho tiempo ya en
                   línea!
                 </p>
@@ -145,7 +158,7 @@ class Actividad1 extends Component {
               <Col
                 xs="2"
                 className="border border-white"
-                style={{ padding: '10px' }}
+                style={{ padding: "10px" }}
               >
                 <ReactSortable
                   list={this.state.list4}
@@ -156,7 +169,7 @@ class Actividad1 extends Component {
                     <div key={item.id}>
                       <div
                         className="card cursor-draggable text-center"
-                        style={{ marginBottom: '0px' }}
+                        style={{ marginBottom: "0px" }}
                       >
                         <div className="text-dark">{item.name}</div>
                       </div>
@@ -165,7 +178,7 @@ class Actividad1 extends Component {
                 </ReactSortable>
               </Col>
               <Col xs="10">
-                <p style={{ marginBottom: '0px' }}>
+                <p style={{ marginBottom: "0px" }}>
                   ¿Me estás diciendo que debo pagar más por el servicio?
                 </p>
               </Col>
@@ -174,7 +187,7 @@ class Actividad1 extends Component {
               <Col
                 xs="2"
                 className="border border-white"
-                style={{ padding: '10px' }}
+                style={{ padding: "10px" }}
               >
                 <ReactSortable
                   list={this.state.list5}
@@ -185,7 +198,7 @@ class Actividad1 extends Component {
                     <div key={item.id}>
                       <div
                         className="card cursor-draggable text-center"
-                        style={{ marginBottom: '0px' }}
+                        style={{ marginBottom: "0px" }}
                       >
                         <div className="text-dark">{item.name}</div>
                       </div>
@@ -194,7 +207,7 @@ class Actividad1 extends Component {
                 </ReactSortable>
               </Col>
               <Col xs="10">
-                <p style={{ marginBottom: '0px' }}>
+                <p style={{ marginBottom: "0px" }}>
                   He repetido mil veces mi situación, ¿tu sí me ayudaras?
                 </p>
               </Col>
@@ -203,7 +216,7 @@ class Actividad1 extends Component {
               <Col
                 xs="2"
                 className="border border-white"
-                style={{ padding: '10px' }}
+                style={{ padding: "10px" }}
               >
                 <ReactSortable
                   list={this.state.list6}
@@ -214,7 +227,7 @@ class Actividad1 extends Component {
                     <div key={item.id}>
                       <div
                         className="card cursor-draggable text-center"
-                        style={{ marginBottom: '0px' }}
+                        style={{ marginBottom: "0px" }}
                       >
                         <div className="text-dark">{item.name}</div>
                       </div>
@@ -223,7 +236,7 @@ class Actividad1 extends Component {
                 </ReactSortable>
               </Col>
               <Col xs="10">
-                <p style={{ marginBottom: '0px' }}>
+                <p style={{ marginBottom: "0px" }}>
                   Quiero que me digas cuanto debo de mi servicio
                 </p>
               </Col>
@@ -232,7 +245,7 @@ class Actividad1 extends Component {
               <Col
                 xs="2"
                 className="border border-white"
-                style={{ padding: '10px' }}
+                style={{ padding: "10px" }}
               >
                 <ReactSortable
                   list={this.state.list7}
@@ -243,7 +256,7 @@ class Actividad1 extends Component {
                     <div key={item.id}>
                       <div
                         className="card cursor-draggable text-center"
-                        style={{ marginBottom: '0px' }}
+                        style={{ marginBottom: "0px" }}
                       >
                         <div className="text-dark">{item.name}</div>
                       </div>
@@ -252,7 +265,7 @@ class Actividad1 extends Component {
                 </ReactSortable>
               </Col>
               <Col xs="10">
-                <p style={{ marginBottom: '0px' }}>
+                <p style={{ marginBottom: "0px" }}>
                   Creo que no es necesario tantos datos que te estoy dando.
                 </p>
               </Col>
@@ -261,7 +274,7 @@ class Actividad1 extends Component {
               <Col
                 xs="2"
                 className="border border-white"
-                style={{ padding: '10px' }}
+                style={{ padding: "10px" }}
               >
                 <ReactSortable
                   list={this.state.list8}
@@ -272,7 +285,7 @@ class Actividad1 extends Component {
                     <div key={item.id}>
                       <div
                         className="card cursor-draggable text-center"
-                        style={{ marginBottom: '0px' }}
+                        style={{ marginBottom: "0px" }}
                       >
                         <div className="text-dark">{item.name}</div>
                       </div>
@@ -281,7 +294,7 @@ class Actividad1 extends Component {
                 </ReactSortable>
               </Col>
               <Col xs="10">
-                <p style={{ marginBottom: '0px' }}>
+                <p style={{ marginBottom: "0px" }}>
                   Muchas gracias por la información que me diste.
                 </p>
               </Col>
@@ -290,7 +303,7 @@ class Actividad1 extends Component {
               <Col
                 xs="2"
                 className="border border-white"
-                style={{ padding: '10px' }}
+                style={{ padding: "10px" }}
               >
                 <ReactSortable
                   list={this.state.list9}
@@ -301,7 +314,7 @@ class Actividad1 extends Component {
                     <div key={item.id}>
                       <div
                         className="card cursor-draggable text-center"
-                        style={{ marginBottom: '0px' }}
+                        style={{ marginBottom: "0px" }}
                       >
                         <div className="text-dark">{item.name}</div>
                       </div>
@@ -310,14 +323,14 @@ class Actividad1 extends Component {
                 </ReactSortable>
               </Col>
               <Col xs="10">
-                <p style={{ marginBottom: '0px' }}>¿De donde me llamas?</p>
+                <p style={{ marginBottom: "0px" }}>¿De donde me llamas?</p>
               </Col>
             </Row>
             <Row className="centrado-fila pl-2 pr-2 bg-fondo-btn2 rounded mb-3">
               <Col
                 xs="2"
                 className="border border-white"
-                style={{ padding: '10px' }}
+                style={{ padding: "10px" }}
               >
                 <ReactSortable
                   list={this.state.list10}
@@ -328,7 +341,7 @@ class Actividad1 extends Component {
                     <div key={item.id}>
                       <div
                         className="card cursor-draggable text-center"
-                        style={{ marginBottom: '0px' }}
+                        style={{ marginBottom: "0px" }}
                       >
                         <div className="text-dark">{item.name}</div>
                       </div>
@@ -337,27 +350,30 @@ class Actividad1 extends Component {
                 </ReactSortable>
               </Col>
               <Col xs="10">
-                <p style={{ marginBottom: '0px' }}>
+                <p style={{ marginBottom: "0px" }}>
                   Desde antes que nacieras tengo este problema, pásame con tu
                   supervisor!!
                 </p>
               </Col>
             </Row>
           </div>
+          {/* <p>{JSON.stringify(this.state)}</p> */}
         </Col>
 
         <Col xs="12" className=" mt-3  centrado-fila">
-          <button className="btn btn-primary">Enviar</button>
+          <Button color="primary" onClick={this.onSave.bind(this)}>
+            Enviar
+          </Button>
         </Col>
         <Col xs="12" className=" mt-3 centrado-fila ">
           <Nota
             title1="Instrucción:"
-            content1="Arrastre los las Letras correctas al recuadro."
+            content1="Arrastre  las   Palabras correctas al recuadro."
           />
         </Col>
       </Row>
-    )
+    );
   }
 }
 
-export default Actividad1
+export default Actividad1;
