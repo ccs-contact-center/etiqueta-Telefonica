@@ -1,54 +1,54 @@
-import React, { Component } from 'react'
-import { Card, CardFooter } from 'reactstrap'
-import withAuth from '../services/withAuth'
+import React, { Component } from "react";
+import { Card, CardFooter } from "reactstrap";
+import withAuth from "../services/withAuth";
 //import { connect } from 'react-redux';
 //import { addProfile, setCampaign, darkTheme,setAvatar } from '../../Redux/Actions/profile';
-import Navegador from './temarioViews/ComponentsNavTemari/Navegador'
-import BienvenidaView from './temarioViews/BienvenidaView'
-import ObjetivoView from './temarioViews/ObjetivoView'
+import Navegador from "./temarioViews/ComponentsNavTemari/Navegador";
+import BienvenidaView from "./temarioViews/BienvenidaView";
+import ObjetivoView from "./temarioViews/ObjetivoView";
 
-import TemaUnoView from './temarioViews/TemaUnoView'
-import TemaDosView from './temarioViews/TemaDosView'
-import TemaTresView from './temarioViews/TemaTresView'
-import TemaCuatroView from './temarioViews/TemaCuatroView'
-import TemaCincoView from './temarioViews/TemaCincoView'
-import TemaSeisView from './temarioViews/TemaSeisView'
-import TemaSieteView from './temarioViews/TemaSieteView'
-import TemaOchoView from './temarioViews/TemaOchoView'
-import TemaNueveView from './temarioViews/TemaNueveView'
-import Actividad1View from './temarioViews/Actividad1View'
+import TemaUnoView from "./temarioViews/TemaUnoView";
+import TemaDosView from "./temarioViews/TemaDosView";
+import TemaTresView from "./temarioViews/TemaTresView";
+import TemaCuatroView from "./temarioViews/TemaCuatroView";
+import TemaCincoView from "./temarioViews/TemaCincoView";
+import TemaSeisView from "./temarioViews/TemaSeisView";
+import TemaSieteView from "./temarioViews/TemaSieteView";
+import TemaOchoView from "./temarioViews/TemaOchoView";
+import TemaNueveView from "./temarioViews/TemaNueveView";
+import Actividad1View from "./temarioViews/Actividad1View";
 
-import TemaDiezView from './temarioViews/TemaDiezView'
-import TemaOnceView from './temarioViews/TemaOnceView'
-import DespedidaView from './temarioViews/DespedidaView'
-import Actividad2View from './temarioViews/Actividad2View'
-import Formulario2View from './temarioViews/formulario2View'
+import TemaDiezView from "./temarioViews/TemaDiezView";
+import TemaOnceView from "./temarioViews/TemaOnceView";
+import DespedidaView from "./temarioViews/DespedidaView";
+import Actividad2View from "./temarioViews/Actividad2View";
+import Formulario2View from "./temarioViews/formulario2View";
 
 //import RecapitulacionView from './temarioViews/RecapitulacionView'
 
 class Inicio extends Component {
   loading = () => (
     <div className="animated fadeIn pt-1 text-center">Cargando...</div>
-  )
+  );
   state = {
     index: 0,
-  }
+  };
   constructor() {
-    super()
-    this.setIndex = this.setIndex.bind(this)
+    super();
+    this.setIndex = this.setIndex.bind(this);
   }
 
   setIndex(index) {
     this.setState({
       index: index,
-    })
+    });
   }
   render() {
     return (
       <div className="animated fadeIn">
         <Card>
           {this.state.index === 0 ? (
-           // < Actividad1View />
+            // // < Formulario2View />
             <BienvenidaView />
           ) : this.state.index === 1 ? (
             <ObjetivoView />
@@ -80,17 +80,16 @@ class Inicio extends Component {
             <Actividad2View />
           ) : this.state.index === 15 ? (
             <DespedidaView />
-          ): this.state.index === 16 ? (
+          ) : this.state.index === 16 ? (
             <Formulario2View />
-          
-           ) : null}
+          ) : null}
           <br />
           <CardFooter>
             <Navegador handleNavigation={this.setIndex} maxIndex={16} />
           </CardFooter>
         </Card>
       </div>
-    )
+    );
   }
 }
 
@@ -121,4 +120,4 @@ class Inicio extends Component {
 // }
 
 //export default connect(mapStateToProps, mapDispatchToProps)(withAuth(Inicio));
-export default withAuth(Inicio)
+export default withAuth(Inicio);
