@@ -10,7 +10,7 @@ import {
   Label,
   Input,
 } from 'reactstrap'
-
+import swal from 'sweetalert'
 import API_CCS from '../../services/API_CCS'
 const API = new API_CCS()
 
@@ -69,36 +69,63 @@ class Formulario2View extends Component {
 
     
     */
+   try {
+    var respuesta = await API.insertarEncuesta(this.state)
+    swal({
+      title: "Status Encusta.",
+      text: "Se guardo encuesta, con id: " + respuesta[0].id,
+      icon: "success",
+      dangerMode: true,
+      button: {
+        text: "Aceptar",
+        value: true,
+        visible: true,
+        className: "btn btn-primary",
+        reset: true,
+      },
+    });
+  } catch (err) {
+    swal({
+      title: "Status Encusta",
+      text: "No se guardo encusta, Intenta de nuevo. ",
+      icon: "error",
+      dangerMode: true,
+      button: {
+        text: "Cerrar",
+        value: true,
+        visible: true,
+        className: "btn btn-primary ",
+      },
+    });
+  }
 
-    if (!this.validate()) {
-      try {
-        var respuesta = await API.insertarEncuesta(this.state)
-        alert('Se guardo la encuesta número ' + respuesta[0].id)
-      } catch (err) {
-        console.log('loggea si hay un error')
-      }
-    } else {
-    }
+    // if (!this.validate()) {
+     
+    // } else {
+    // }
     //Aqui deberias hacer algo si no está validado el form
     //
 
-    if (!this.validate()) {
-      return
-    }
-    this.setState({
-      message: 'Guardado.....',
-    })
+    // if (this.validate()) {
+   
+    //   this.setState({
+    //     message: 'Guardado.....',
+    //   })
+   
+    // }
+   
   }
 
-  validate(e) {
-    if (this.state.acept !== true) {
-      this.setState({
-        message: 'Dé en  aceptar',
+
+  // validate(e) {
+  //   if (this.state.acept !== false) {
+  //     this.setState({
+  //       message: 'Dé en  aceptar',
       
-      })
-    }
-    alert(this.state.message);
-  }
+  //     })
+  //   }
+    
+  // }
 
 
   render() {
