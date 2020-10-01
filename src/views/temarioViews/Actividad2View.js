@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import {
   CardBody,
   CardHeader,
@@ -9,41 +9,89 @@ import {
   FormGroup,
   Label,
   Input,
-} from 'reactstrap'
-import swal from "sweetalert"
+} from "reactstrap";
+import swal from "sweetalert";
 //import { bind } from 'core-js/fn/function'
 import AuthService from "../../services/AuthService";
-import API_CCS from '../../services/API_CCS'
-const API = new API_CCS()
+import API_CCS from "../../services/API_CCS";
+const API = new API_CCS();
 
 class ActividadView extends Component {
   loading = () => (
     <div className="animated fadeIn pt-1 text-center">Cargando...</div>
-  )
+  );
 
   constructor(props) {
-    super(props)
+    super(props);
     this.Auth = new AuthService();
     this.state = {
-      acierto1: '',
-      acierto2: '',
-      acierto3: '',
-      acierto4: '',
-      acierto5: '',
-      acierto6: '',
-      acierto7: '',
-      acierto8: '',
-      acierto9: '',
-      acierto10: '',
+      evaluacion: [
+        {
+          acierto1: "",
+          acierto2: "",
+          acierto3: "",
+          acierto4: "",
+          acierto5: "",
+          acierto6: "",
+          acierto7: "",
+          acierto8: "",
+          acierto9: "",
+          acierto10: "",
+        },
+      ],
       id_ccs: this.Auth.getProfile().id_ccs,
       form: "etiquetaTelefonica-2",
+      score: "",
+    };
+  }
+
+  compararJson(e) {
+    /*var obj1 = {
+      acierto1: "a",
+      acierto2: "a",
+      acierto3: "a",
+      acierto4: "a",
+      acierto5: "a",
+      acierto6: "a",
+      acierto7: "a",
+      acierto8: "a",
+      acierto9: "a",
+      acierto10: "a",
+     
+    };
+
+    console.log(JSON.stringify(obj1) === JSON.stringify(this.state.evaluacion));*/
+
+    var i;
+    var obj1 = [
+      {
+        acierto1: "a",
+        acierto2: "a",
+        acierto3: "a",
+        acierto4: "a",
+        acierto5: "a",
+        acierto6: "a",
+        acierto7: "a",
+        acierto8: "a",
+        acierto9: "a",
+        acierto10: "a",
+      }
+    ];
+
+    var obj2 = JSON.stringify(this.state.evaluacion);
+      
+    for (i in obj1) {
+      console.log(obj1[i] === JSON.parse(obj2)[i]);
+    }
+    for (i in obj2) {
+      console.log(obj1[i] === obj2[i]);
     }
   }
 
   onChange(e) {
     this.setState({
       [e.target.name]: e.target.value,
-    })
+    });
   }
 
   async onSave(e) {
@@ -63,7 +111,7 @@ class ActividadView extends Component {
           reset: true,
         },
       });
-      
+
       // alert("Se guardo la actividad: 1, con id: " + respuesta[0].id);
     } catch (err) {
       swal({
@@ -92,12 +140,9 @@ class ActividadView extends Component {
 
   // }
 
- 
-
   render() {
     return (
       <div className="animated fadeIn">
-        
         <Row>
           <Col>
             <CardHeader className="">
@@ -106,14 +151,22 @@ class ActividadView extends Component {
             <CardBody className="">
               <p>
                 Es hora de saber qué has aprendido de este curso. Elige la
-                opción de acuerdo a cada pregunta.{' '}
+                opción de acuerdo a cada pregunta.{" "}
               </p>
-              <Form onSubmit={this.handleSubmit}>
-                <div className="cajaA2" style={{ backgroundColor: '#d5d4d8' }}>
+              <Form>
+                <Button
+                  id="guardar1"
+                  name="guardar1"
+                  color="primary"
+                  onClick={this.compararJson.bind(this)}
+                >
+                  Enviar
+                </Button>
+                <div className="cajaA2" style={{ backgroundColor: "#d5d4d8" }}>
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
-                      <b>1. ¿Qué es etiqueta telefónica?</b>{' '}
-                      <span style={{ color: 'red' }}>*</span>
+                      <b>1. ¿Qué es etiqueta telefónica?</b>{" "}
+                      <span style={{ color: "red" }}>*</span>
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
@@ -155,12 +208,12 @@ class ActividadView extends Component {
 
                 <div
                   className="cajaA2 mt-3"
-                  style={{ backgroundColor: '#d5d4d8' }}
+                  style={{ backgroundColor: "#d5d4d8" }}
                 >
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
-                      <b>2. ¿Por qué es importante dentro de tus funciones?</b>{' '}
-                      <span style={{ color: 'red' }}>*</span>
+                      <b>2. ¿Por qué es importante dentro de tus funciones?</b>{" "}
+                      <span style={{ color: "red" }}>*</span>
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
@@ -208,12 +261,12 @@ class ActividadView extends Component {
 
                 <div
                   className="cajaA2 mt-3"
-                  style={{ backgroundColor: '#d5d4d8' }}
+                  style={{ backgroundColor: "#d5d4d8" }}
                 >
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
                       <b>3. ¿En qué partes de divide una llamada?</b>
-                      <span style={{ color: 'red' }}>*</span>
+                      <span style={{ color: "red" }}>*</span>
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
@@ -251,12 +304,12 @@ class ActividadView extends Component {
 
                 <div
                   className="cajaA2 mt-3"
-                  style={{ backgroundColor: '#d5d4d8' }}
+                  style={{ backgroundColor: "#d5d4d8" }}
                 >
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
-                      <b> 4. ¿Qué debes hacer al personalizar en tu llamada?</b>{' '}
-                      <span style={{ color: 'red' }}>*</span>
+                      <b> 4. ¿Qué debes hacer al personalizar en tu llamada?</b>{" "}
+                      <span style={{ color: "red" }}>*</span>
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
@@ -304,16 +357,16 @@ class ActividadView extends Component {
 
                 <div
                   className="cajaA2 mt-3"
-                  style={{ backgroundColor: '#d5d4d8' }}
+                  style={{ backgroundColor: "#d5d4d8" }}
                 >
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
                       <b>
-                        {' '}
+                        {" "}
                         5. “Fuistes”, “Haiga”, “Bajastes”, ”Pos”, “vinistes” son
                         ejemplos de:
-                      </b>{' '}
-                      <span style={{ color: 'red' }}>*</span>
+                      </b>{" "}
+                      <span style={{ color: "red" }}>*</span>
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
@@ -352,16 +405,16 @@ class ActividadView extends Component {
 
                 <div
                   className="cajaA2 mt-3"
-                  style={{ backgroundColor: '#d5d4d8' }}
+                  style={{ backgroundColor: "#d5d4d8" }}
                 >
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
                       <b>
-                        {' '}
+                        {" "}
                         6. ¿A qué nos referimos cuando te pedimos que empatices
                         con el cliente?
-                      </b>{' '}
-                      <span style={{ color: 'red' }}>*</span>
+                      </b>{" "}
+                      <span style={{ color: "red" }}>*</span>
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
@@ -406,12 +459,12 @@ class ActividadView extends Component {
 
                 <div
                   className="cajaA2 mt-3"
-                  style={{ backgroundColor: '#d5d4d8' }}
+                  style={{ backgroundColor: "#d5d4d8" }}
                 >
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
-                      <b>7. Son algunas frases de escucha activa.</b>{' '}
-                      <span style={{ color: 'red' }}>*</span>
+                      <b>7. Son algunas frases de escucha activa.</b>{" "}
+                      <span style={{ color: "red" }}>*</span>
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
@@ -453,12 +506,12 @@ class ActividadView extends Component {
 
                 <div
                   className="cajaA2 mt-3"
-                  style={{ backgroundColor: '#d5d4d8' }}
+                  style={{ backgroundColor: "#d5d4d8" }}
                 >
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
-                      <b>8. ¿Por qué es importante la voz en tu trabajo?</b>{' '}
-                      <span style={{ color: 'red' }}>*</span>
+                      <b>8. ¿Por qué es importante la voz en tu trabajo?</b>{" "}
+                      <span style={{ color: "red" }}>*</span>
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
@@ -505,12 +558,12 @@ class ActividadView extends Component {
 
                 <div
                   className="cajaA2 mt-3"
-                  style={{ backgroundColor: '#d5d4d8' }}
+                  style={{ backgroundColor: "#d5d4d8" }}
                 >
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
-                      <b>9. ¿Qué es la escucha activa?</b>{' '}
-                      <span style={{ color: 'red' }}>*</span>
+                      <b>9. ¿Qué es la escucha activa?</b>{" "}
+                      <span style={{ color: "red" }}>*</span>
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
@@ -554,7 +607,7 @@ class ActividadView extends Component {
 
                 <div
                   className="cajaA2 mt-3"
-                  style={{ backgroundColor: '#d5d4d8' }}
+                  style={{ backgroundColor: "#d5d4d8" }}
                 >
                   <FormGroup tag="fieldset" row>
                     <legend className="col-form-label ml-2">
@@ -562,8 +615,8 @@ class ActividadView extends Component {
                         10. Su definición es: Decir las cosas de manera
                         adecuada, en el momento preciso, sin ser agresivo ni
                         dócil.
-                      </b>{' '}
-                      <span style={{ color: 'red' }}>*</span>
+                      </b>{" "}
+                      <span style={{ color: "red" }}>*</span>
                     </legend>
                     <Col sm={12}>
                       <FormGroup check>
@@ -615,14 +668,16 @@ class ActividadView extends Component {
                   </Col>
                 </FormGroup>
               </Form>
-              {/* <div>
-                <p>{JSON.stringify(this.state)}</p>
-              </div> */}
+              {
+                <div>
+                  <p>{JSON.stringify(this.state)}</p>
+                </div>
+              }
             </CardBody>
           </Col>
         </Row>
       </div>
-    )
+    );
   }
 }
-export default ActividadView
+export default ActividadView;
